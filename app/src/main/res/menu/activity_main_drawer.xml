@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Group"
+            android:icon="@mipmap/fenzu"
+            android:title="分组" />
+        <item
+            android:id="@+id/AddPeople"
+            android:icon="@mipmap/addpeope"
+            android:title="新建档案" />
+        <item
+            android:id="@+id/BusinessCard"
+            android:icon="@mipmap/saomiao"
+            android:title="扫描名片" />
+    </group>
+
+    <item android:title="其他功能">
+        <menu>
+
+            <item
+                android:id="@+id/Share"
+                android:icon="@mipmap/fenxiang"
+                android:title="分享" />
+            <item
+                android:id="@+id/Back"
+                android:icon="@mipmap/fankui"
+                android:title="反馈" />
+            <item
+                android:id="@+id/Upload"
+                android:icon="@mipmap/gengxin"
+                android:title="备份数据" />
+        </menu>
+
+    </item>
+    <item android:title="关于我们">
+        <menu>
+            <item
+                android:id="@+id/AboutUs"
+                android:icon="@mipmap/logo"
+                android:title="产品介绍" />
+            <item
+                android:id="@+id/UpdateLog"
+                android:icon="@mipmap/rizhi"
+                android:title="更新日志"/>
+            <item
+                android:id="@+id/Team"
+                android:icon="@mipmap/team"
+                android:title="团队"/>
+
+        </menu>
+    </item>
+
+</menu>

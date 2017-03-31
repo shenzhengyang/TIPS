@@ -1,0 +1,60 @@
+<com.tips.zy.tips.Main.View.ItemMenuView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="16dp"
+        android:text="删除"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:background="#ffcc2500"/>
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="16dp"
+        android:text="信息"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:background="#ff308dff"/>
+
+    <LinearLayout
+        android:background="@color/Wite"
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center">
+        <ImageView
+            android:background="@drawable/search_icon"
+            android:layout_marginRight="10dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/logo"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+
+                android:textColor="@color/gray_bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="姓名"/>
+            <TextView
+                android:textSize="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="爱好"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.tips.zy.tips.Main.View.ItemMenuView>
