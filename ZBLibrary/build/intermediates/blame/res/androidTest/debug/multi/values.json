@@ -472,14 +472,7 @@
                     "endOffset": 3017
                 },
                 "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 88,
-                        "startColumn": 4,
-                        "startOffset": 2977,
-                        "endColumn": 44,
-                        "endOffset": 3017
-                    }
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
                 }
             },
             {
@@ -635,7 +628,14 @@
                     "endOffset": 3582
                 },
                 "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 101,
+                        "startColumn": 4,
+                        "startOffset": 3543,
+                        "endColumn": 43,
+                        "endOffset": 3582
+                    }
                 }
             },
             {
@@ -2182,51 +2182,9 @@
                     "startLine": 244,
                     "startColumn": 4,
                     "startOffset": 11099,
-                    "endLine": 250,
+                    "endLine": 246,
                     "endColumn": 12,
-                    "endOffset": 11390
-                },
-                "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 244,
-                        "startColumn": 4,
-                        "startOffset": 11099,
-                        "endLine": 250,
-                        "endColumn": 12,
-                        "endOffset": 11390
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 251,
-                    "startColumn": 4,
-                    "startOffset": 11395,
-                    "endLine": 253,
-                    "endColumn": 12,
-                    "endOffset": 11550
-                },
-                "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 251,
-                        "startColumn": 4,
-                        "startOffset": 11395,
-                        "endLine": 253,
-                        "endColumn": 12,
-                        "endOffset": 11550
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 254,
-                    "startColumn": 4,
-                    "startOffset": 11555,
-                    "endLine": 263,
-                    "endColumn": 12,
-                    "endOffset": 12113
+                    "endOffset": 11182
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2234,12 +2192,12 @@
             },
             {
                 "to": {
-                    "startLine": 264,
+                    "startLine": 247,
                     "startColumn": 4,
-                    "startOffset": 12118,
-                    "endLine": 268,
+                    "startOffset": 11187,
+                    "endLine": 249,
                     "endColumn": 12,
-                    "endOffset": 12336
+                    "endOffset": 11254
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2247,12 +2205,12 @@
             },
             {
                 "to": {
-                    "startLine": 269,
+                    "startLine": 250,
                     "startColumn": 4,
-                    "startOffset": 12341,
-                    "endLine": 271,
+                    "startOffset": 11259,
+                    "endLine": 259,
                     "endColumn": 12,
-                    "endOffset": 12479
+                    "endOffset": 11817
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2260,33 +2218,64 @@
             },
             {
                 "to": {
-                    "startLine": 272,
+                    "startLine": 260,
                     "startColumn": 4,
-                    "startOffset": 12484,
+                    "startOffset": 11822,
+                    "endLine": 264,
+                    "endColumn": 12,
+                    "endOffset": 12040
+                },
+                "from": {
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 12045,
+                    "endLine": 267,
+                    "endColumn": 12,
+                    "endOffset": 12183
+                },
+                "from": {
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 12188,
+                    "endLine": 278,
+                    "endColumn": 12,
+                    "endOffset": 12667
+                },
+                "from": {
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 12672,
                     "endLine": 282,
                     "endColumn": 12,
-                    "endOffset": 13027
+                    "endOffset": 12822
                 },
                 "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 272,
-                        "startColumn": 4,
-                        "startOffset": 12484,
-                        "endLine": 282,
-                        "endColumn": 12,
-                        "endOffset": 13027
-                    }
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 283,
                     "startColumn": 4,
-                    "startOffset": 13032,
-                    "endLine": 286,
+                    "startOffset": 12827,
+                    "endLine": 285,
                     "endColumn": 12,
-                    "endOffset": 13182
+                    "endOffset": 12934
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2294,12 +2283,12 @@
             },
             {
                 "to": {
-                    "startLine": 287,
+                    "startLine": 286,
                     "startColumn": 4,
-                    "startOffset": 13187,
-                    "endLine": 289,
+                    "startOffset": 12939,
+                    "endLine": 288,
                     "endColumn": 12,
-                    "endOffset": 13294
+                    "endOffset": 13049
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2307,12 +2296,12 @@
             },
             {
                 "to": {
-                    "startLine": 290,
+                    "startLine": 289,
                     "startColumn": 4,
-                    "startOffset": 13299,
-                    "endLine": 292,
+                    "startOffset": 13054,
+                    "endLine": 291,
                     "endColumn": 12,
-                    "endOffset": 13409
+                    "endOffset": 13162
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2320,12 +2309,12 @@
             },
             {
                 "to": {
-                    "startLine": 293,
+                    "startLine": 292,
                     "startColumn": 4,
-                    "startOffset": 13414,
-                    "endLine": 295,
+                    "startOffset": 13167,
+                    "endLine": 294,
                     "endColumn": 12,
-                    "endOffset": 13522
+                    "endOffset": 13275
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2333,12 +2322,12 @@
             },
             {
                 "to": {
-                    "startLine": 296,
+                    "startLine": 295,
                     "startColumn": 4,
-                    "startOffset": 13527,
-                    "endLine": 298,
+                    "startOffset": 13280,
+                    "endLine": 297,
                     "endColumn": 12,
-                    "endOffset": 13635
+                    "endOffset": 13389
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2346,12 +2335,12 @@
             },
             {
                 "to": {
-                    "startLine": 299,
+                    "startLine": 298,
                     "startColumn": 4,
-                    "startOffset": 13640,
-                    "endLine": 301,
+                    "startOffset": 13394,
+                    "endLine": 300,
                     "endColumn": 12,
-                    "endOffset": 13749
+                    "endOffset": 13504
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2359,12 +2348,12 @@
             },
             {
                 "to": {
-                    "startLine": 302,
+                    "startLine": 301,
                     "startColumn": 4,
-                    "startOffset": 13754,
-                    "endLine": 304,
+                    "startOffset": 13509,
+                    "endLine": 303,
                     "endColumn": 12,
-                    "endOffset": 13864
+                    "endOffset": 13617
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2372,12 +2361,12 @@
             },
             {
                 "to": {
-                    "startLine": 305,
+                    "startLine": 304,
                     "startColumn": 4,
-                    "startOffset": 13869,
-                    "endLine": 307,
+                    "startOffset": 13622,
+                    "endLine": 312,
                     "endColumn": 12,
-                    "endOffset": 13977
+                    "endOffset": 14085
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2385,12 +2374,12 @@
             },
             {
                 "to": {
-                    "startLine": 308,
+                    "startLine": 313,
                     "startColumn": 4,
-                    "startOffset": 13982,
-                    "endLine": 316,
+                    "startOffset": 14090,
+                    "endLine": 317,
                     "endColumn": 12,
-                    "endOffset": 14445
+                    "endOffset": 14342
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2398,12 +2387,12 @@
             },
             {
                 "to": {
-                    "startLine": 317,
+                    "startLine": 318,
                     "startColumn": 4,
-                    "startOffset": 14450,
-                    "endLine": 321,
+                    "startOffset": 14347,
+                    "endLine": 323,
                     "endColumn": 12,
-                    "endOffset": 14702
+                    "endOffset": 14656
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2411,12 +2400,12 @@
             },
             {
                 "to": {
-                    "startLine": 322,
+                    "startLine": 324,
                     "startColumn": 4,
-                    "startOffset": 14707,
-                    "endLine": 327,
+                    "startOffset": 14661,
+                    "endLine": 328,
                     "endColumn": 12,
-                    "endOffset": 15016
+                    "endOffset": 14922
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2424,12 +2413,12 @@
             },
             {
                 "to": {
-                    "startLine": 328,
+                    "startLine": 329,
                     "startColumn": 4,
-                    "startOffset": 15021,
-                    "endLine": 332,
+                    "startOffset": 14927,
+                    "endLine": 333,
                     "endColumn": 12,
-                    "endOffset": 15282
+                    "endOffset": 15189
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2437,12 +2426,12 @@
             },
             {
                 "to": {
-                    "startLine": 333,
+                    "startLine": 334,
                     "startColumn": 4,
-                    "startOffset": 15287,
+                    "startOffset": 15194,
                     "endLine": 337,
                     "endColumn": 12,
-                    "endOffset": 15549
+                    "endOffset": 15405
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2452,10 +2441,10 @@
                 "to": {
                     "startLine": 338,
                     "startColumn": 4,
-                    "startOffset": 15554,
-                    "endLine": 341,
+                    "startOffset": 15410,
+                    "endLine": 342,
                     "endColumn": 12,
-                    "endOffset": 15765
+                    "endOffset": 15651
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2463,12 +2452,12 @@
             },
             {
                 "to": {
-                    "startLine": 342,
+                    "startLine": 343,
                     "startColumn": 4,
-                    "startOffset": 15770,
+                    "startOffset": 15656,
                     "endLine": 346,
                     "endColumn": 12,
-                    "endOffset": 16011
+                    "endOffset": 15863
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2478,10 +2467,10 @@
                 "to": {
                     "startLine": 347,
                     "startColumn": 4,
-                    "startOffset": 16016,
-                    "endLine": 350,
+                    "startOffset": 15868,
+                    "endLine": 354,
                     "endColumn": 12,
-                    "endOffset": 16223
+                    "endOffset": 16267
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2489,12 +2478,12 @@
             },
             {
                 "to": {
-                    "startLine": 351,
+                    "startLine": 355,
                     "startColumn": 4,
-                    "startOffset": 16228,
+                    "startOffset": 16272,
                     "endLine": 358,
                     "endColumn": 12,
-                    "endOffset": 16627
+                    "endOffset": 16455
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2504,10 +2493,10 @@
                 "to": {
                     "startLine": 359,
                     "startColumn": 4,
-                    "startOffset": 16632,
-                    "endLine": 362,
+                    "startOffset": 16460,
+                    "endLine": 365,
                     "endColumn": 12,
-                    "endOffset": 16815
+                    "endOffset": 16789
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2515,12 +2504,12 @@
             },
             {
                 "to": {
-                    "startLine": 363,
+                    "startLine": 366,
                     "startColumn": 4,
-                    "startOffset": 16820,
-                    "endLine": 369,
+                    "startOffset": 16794,
+                    "endLine": 370,
                     "endColumn": 12,
-                    "endOffset": 17149
+                    "endOffset": 17053
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2528,12 +2517,12 @@
             },
             {
                 "to": {
-                    "startLine": 370,
+                    "startLine": 371,
                     "startColumn": 4,
-                    "startOffset": 17154,
-                    "endLine": 374,
+                    "startOffset": 17058,
+                    "endLine": 378,
                     "endColumn": 12,
-                    "endOffset": 17413
+                    "endOffset": 17442
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2541,12 +2530,12 @@
             },
             {
                 "to": {
-                    "startLine": 375,
+                    "startLine": 379,
                     "startColumn": 4,
-                    "startOffset": 17418,
-                    "endLine": 382,
+                    "startOffset": 17447,
+                    "endLine": 381,
                     "endColumn": 12,
-                    "endOffset": 17802
+                    "endOffset": 17585
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2554,12 +2543,12 @@
             },
             {
                 "to": {
-                    "startLine": 383,
+                    "startLine": 382,
                     "startColumn": 4,
-                    "startOffset": 17807,
-                    "endLine": 385,
+                    "startOffset": 17590,
+                    "endLine": 384,
                     "endColumn": 12,
-                    "endOffset": 17945
+                    "endOffset": 17721
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2567,12 +2556,12 @@
             },
             {
                 "to": {
-                    "startLine": 386,
+                    "startLine": 385,
                     "startColumn": 4,
-                    "startOffset": 17950,
+                    "startOffset": 17726,
                     "endLine": 388,
                     "endColumn": 12,
-                    "endOffset": 18081
+                    "endOffset": 17922
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2582,10 +2571,10 @@
                 "to": {
                     "startLine": 389,
                     "startColumn": 4,
-                    "startOffset": 18086,
-                    "endLine": 392,
+                    "startOffset": 17927,
+                    "endLine": 391,
                     "endColumn": 12,
-                    "endOffset": 18282
+                    "endOffset": 18035
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2593,12 +2582,12 @@
             },
             {
                 "to": {
-                    "startLine": 393,
+                    "startLine": 392,
                     "startColumn": 4,
-                    "startOffset": 18287,
+                    "startOffset": 18040,
                     "endLine": 395,
                     "endColumn": 12,
-                    "endOffset": 18395
+                    "endOffset": 18227
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2608,10 +2597,10 @@
                 "to": {
                     "startLine": 396,
                     "startColumn": 4,
-                    "startOffset": 18400,
+                    "startOffset": 18232,
                     "endLine": 399,
                     "endColumn": 12,
-                    "endOffset": 18587
+                    "endOffset": 18421
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2621,10 +2610,10 @@
                 "to": {
                     "startLine": 400,
                     "startColumn": 4,
-                    "startOffset": 18592,
-                    "endLine": 403,
+                    "startOffset": 18426,
+                    "endLine": 402,
                     "endColumn": 12,
-                    "endOffset": 18781
+                    "endOffset": 18532
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2632,12 +2621,12 @@
             },
             {
                 "to": {
-                    "startLine": 404,
+                    "startLine": 403,
                     "startColumn": 4,
-                    "startOffset": 18786,
-                    "endLine": 406,
+                    "startOffset": 18537,
+                    "endLine": 407,
                     "endColumn": 12,
-                    "endOffset": 18892
+                    "endOffset": 18766
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2645,12 +2634,12 @@
             },
             {
                 "to": {
-                    "startLine": 407,
+                    "startLine": 408,
                     "startColumn": 4,
-                    "startOffset": 18897,
-                    "endLine": 411,
+                    "startOffset": 18771,
+                    "endLine": 413,
                     "endColumn": 12,
-                    "endOffset": 19126
+                    "endOffset": 19058
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2658,12 +2647,12 @@
             },
             {
                 "to": {
-                    "startLine": 412,
+                    "startLine": 414,
                     "startColumn": 4,
-                    "startOffset": 19131,
+                    "startOffset": 19063,
                     "endLine": 417,
                     "endColumn": 12,
-                    "endOffset": 19418
+                    "endOffset": 19217
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2673,10 +2662,10 @@
                 "to": {
                     "startLine": 418,
                     "startColumn": 4,
-                    "startOffset": 19423,
+                    "startOffset": 19222,
                     "endLine": 421,
                     "endColumn": 12,
-                    "endOffset": 19577
+                    "endOffset": 19409
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2686,10 +2675,10 @@
                 "to": {
                     "startLine": 422,
                     "startColumn": 4,
-                    "startOffset": 19582,
-                    "endLine": 425,
+                    "startOffset": 19414,
+                    "endLine": 428,
                     "endColumn": 12,
-                    "endOffset": 19769
+                    "endOffset": 19748
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2697,12 +2686,12 @@
             },
             {
                 "to": {
-                    "startLine": 426,
+                    "startLine": 429,
                     "startColumn": 4,
-                    "startOffset": 19774,
-                    "endLine": 432,
+                    "startOffset": 19753,
+                    "endLine": 431,
                     "endColumn": 12,
-                    "endOffset": 20108
+                    "endOffset": 19881
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2710,12 +2699,12 @@
             },
             {
                 "to": {
-                    "startLine": 433,
+                    "startLine": 432,
                     "startColumn": 4,
-                    "startOffset": 20113,
-                    "endLine": 435,
+                    "startOffset": 19886,
+                    "endLine": 434,
                     "endColumn": 12,
-                    "endOffset": 20241
+                    "endOffset": 20012
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2723,12 +2712,12 @@
             },
             {
                 "to": {
-                    "startLine": 436,
+                    "startLine": 435,
                     "startColumn": 4,
-                    "startOffset": 20246,
-                    "endLine": 438,
+                    "startOffset": 20017,
+                    "endLine": 444,
                     "endColumn": 12,
-                    "endOffset": 20372
+                    "endOffset": 20561
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2736,12 +2725,12 @@
             },
             {
                 "to": {
-                    "startLine": 439,
+                    "startLine": 445,
                     "startColumn": 4,
-                    "startOffset": 20377,
-                    "endLine": 448,
+                    "startOffset": 20566,
+                    "endLine": 447,
                     "endColumn": 12,
-                    "endOffset": 20921
+                    "endOffset": 20687
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2749,12 +2738,12 @@
             },
             {
                 "to": {
-                    "startLine": 449,
+                    "startLine": 448,
                     "startColumn": 4,
-                    "startOffset": 20926,
-                    "endLine": 451,
+                    "startOffset": 20692,
+                    "endLine": 453,
                     "endColumn": 12,
-                    "endOffset": 21047
+                    "endOffset": 20999
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2762,12 +2751,12 @@
             },
             {
                 "to": {
-                    "startLine": 452,
+                    "startLine": 454,
                     "startColumn": 4,
-                    "startOffset": 21052,
-                    "endLine": 457,
+                    "startOffset": 21004,
+                    "endLine": 459,
                     "endColumn": 12,
-                    "endOffset": 21359
+                    "endOffset": 21296
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2775,12 +2764,12 @@
             },
             {
                 "to": {
-                    "startLine": 458,
+                    "startLine": 460,
                     "startColumn": 4,
-                    "startOffset": 21364,
-                    "endLine": 463,
+                    "startOffset": 21301,
+                    "endLine": 464,
                     "endColumn": 12,
-                    "endOffset": 21656
+                    "endOffset": 21539
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2788,12 +2777,12 @@
             },
             {
                 "to": {
-                    "startLine": 464,
+                    "startLine": 465,
                     "startColumn": 4,
-                    "startOffset": 21661,
-                    "endLine": 468,
+                    "startOffset": 21544,
+                    "endLine": 469,
                     "endColumn": 12,
-                    "endOffset": 21899
+                    "endOffset": 21780
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2801,12 +2790,12 @@
             },
             {
                 "to": {
-                    "startLine": 469,
+                    "startLine": 470,
                     "startColumn": 4,
-                    "startOffset": 21904,
-                    "endLine": 473,
+                    "startOffset": 21785,
+                    "endLine": 472,
                     "endColumn": 12,
-                    "endOffset": 22140
+                    "endOffset": 21924
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2814,12 +2803,12 @@
             },
             {
                 "to": {
-                    "startLine": 474,
+                    "startLine": 473,
                     "startColumn": 4,
-                    "startOffset": 22145,
-                    "endLine": 476,
+                    "startOffset": 21929,
+                    "endLine": 481,
                     "endColumn": 12,
-                    "endOffset": 22284
+                    "endOffset": 22472
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2827,12 +2816,12 @@
             },
             {
                 "to": {
-                    "startLine": 477,
+                    "startLine": 482,
                     "startColumn": 4,
-                    "startOffset": 22289,
-                    "endLine": 485,
+                    "startOffset": 22477,
+                    "endLine": 484,
                     "endColumn": 12,
-                    "endOffset": 22832
+                    "endOffset": 22625
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2840,12 +2829,12 @@
             },
             {
                 "to": {
-                    "startLine": 486,
+                    "startLine": 485,
                     "startColumn": 4,
-                    "startOffset": 22837,
+                    "startOffset": 22630,
                     "endLine": 488,
                     "endColumn": 12,
-                    "endOffset": 22985
+                    "endOffset": 22865
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2855,10 +2844,10 @@
                 "to": {
                     "startLine": 489,
                     "startColumn": 4,
-                    "startOffset": 22990,
-                    "endLine": 492,
+                    "startOffset": 22870,
+                    "endLine": 494,
                     "endColumn": 12,
-                    "endOffset": 23225
+                    "endOffset": 23163
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2866,12 +2855,12 @@
             },
             {
                 "to": {
-                    "startLine": 493,
+                    "startLine": 495,
                     "startColumn": 4,
-                    "startOffset": 23230,
-                    "endLine": 498,
+                    "startOffset": 23168,
+                    "endLine": 500,
                     "endColumn": 12,
-                    "endOffset": 23523
+                    "endOffset": 23507
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2879,12 +2868,12 @@
             },
             {
                 "to": {
-                    "startLine": 499,
+                    "startLine": 501,
                     "startColumn": 4,
-                    "startOffset": 23528,
-                    "endLine": 504,
+                    "startOffset": 23512,
+                    "endLine": 505,
                     "endColumn": 12,
-                    "endOffset": 23867
+                    "endOffset": 23777
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2892,12 +2881,12 @@
             },
             {
                 "to": {
-                    "startLine": 505,
+                    "startLine": 506,
                     "startColumn": 4,
-                    "startOffset": 23872,
-                    "endLine": 509,
+                    "startOffset": 23782,
+                    "endLine": 510,
                     "endColumn": 12,
-                    "endOffset": 24137
+                    "endOffset": 24045
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2905,12 +2894,12 @@
             },
             {
                 "to": {
-                    "startLine": 510,
+                    "startLine": 511,
                     "startColumn": 4,
-                    "startOffset": 24142,
-                    "endLine": 514,
+                    "startOffset": 24050,
+                    "endLine": 513,
                     "endColumn": 12,
-                    "endOffset": 24405
+                    "endOffset": 24187
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2918,12 +2907,12 @@
             },
             {
                 "to": {
-                    "startLine": 515,
+                    "startLine": 514,
                     "startColumn": 4,
-                    "startOffset": 24410,
-                    "endLine": 517,
+                    "startOffset": 24192,
+                    "endLine": 516,
                     "endColumn": 12,
-                    "endOffset": 24547
+                    "endOffset": 24334
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2931,12 +2920,12 @@
             },
             {
                 "to": {
-                    "startLine": 518,
+                    "startLine": 517,
                     "startColumn": 4,
-                    "startOffset": 24552,
-                    "endLine": 520,
+                    "startOffset": 24339,
+                    "endLine": 519,
                     "endColumn": 12,
-                    "endOffset": 24694
+                    "endOffset": 24436
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2944,12 +2933,12 @@
             },
             {
                 "to": {
-                    "startLine": 521,
+                    "startLine": 520,
                     "startColumn": 4,
-                    "startOffset": 24699,
+                    "startOffset": 24441,
                     "endLine": 523,
                     "endColumn": 12,
-                    "endOffset": 24796
+                    "endOffset": 24623
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2959,10 +2948,10 @@
                 "to": {
                     "startLine": 524,
                     "startColumn": 4,
-                    "startOffset": 24801,
-                    "endLine": 527,
+                    "startOffset": 24628,
+                    "endLine": 526,
                     "endColumn": 12,
-                    "endOffset": 24983
+                    "endOffset": 24776
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2970,12 +2959,12 @@
             },
             {
                 "to": {
-                    "startLine": 528,
+                    "startLine": 527,
                     "startColumn": 4,
-                    "startOffset": 24988,
+                    "startOffset": 24781,
                     "endLine": 530,
                     "endColumn": 12,
-                    "endOffset": 25136
+                    "endOffset": 24963
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2985,10 +2974,10 @@
                 "to": {
                     "startLine": 531,
                     "startColumn": 4,
-                    "startOffset": 25141,
-                    "endLine": 534,
+                    "startOffset": 24968,
+                    "endLine": 533,
                     "endColumn": 12,
-                    "endOffset": 25323
+                    "endOffset": 25116
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -2996,12 +2985,12 @@
             },
             {
                 "to": {
-                    "startLine": 535,
+                    "startLine": 534,
                     "startColumn": 4,
-                    "startOffset": 25328,
+                    "startOffset": 25121,
                     "endLine": 537,
                     "endColumn": 12,
-                    "endOffset": 25476
+                    "endOffset": 25301
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3011,10 +3000,10 @@
                 "to": {
                     "startLine": 538,
                     "startColumn": 4,
-                    "startOffset": 25481,
-                    "endLine": 541,
+                    "startOffset": 25306,
+                    "endLine": 540,
                     "endColumn": 12,
-                    "endOffset": 25661
+                    "endOffset": 25450
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3022,12 +3011,12 @@
             },
             {
                 "to": {
-                    "startLine": 542,
+                    "startLine": 541,
                     "startColumn": 4,
-                    "startOffset": 25666,
-                    "endLine": 544,
+                    "startOffset": 25455,
+                    "endLine": 543,
                     "endColumn": 12,
-                    "endOffset": 25810
+                    "endOffset": 25599
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3035,12 +3024,12 @@
             },
             {
                 "to": {
-                    "startLine": 545,
+                    "startLine": 544,
                     "startColumn": 4,
-                    "startOffset": 25815,
+                    "startOffset": 25604,
                     "endLine": 547,
                     "endColumn": 12,
-                    "endOffset": 25959
+                    "endOffset": 25784
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3050,10 +3039,10 @@
                 "to": {
                     "startLine": 548,
                     "startColumn": 4,
-                    "startOffset": 25964,
-                    "endLine": 551,
+                    "startOffset": 25789,
+                    "endLine": 550,
                     "endColumn": 12,
-                    "endOffset": 26144
+                    "endOffset": 25933
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3061,12 +3050,12 @@
             },
             {
                 "to": {
-                    "startLine": 552,
+                    "startLine": 551,
                     "startColumn": 4,
-                    "startOffset": 26149,
-                    "endLine": 554,
+                    "startOffset": 25938,
+                    "endLine": 553,
                     "endColumn": 12,
-                    "endOffset": 26293
+                    "endOffset": 26082
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3074,12 +3063,12 @@
             },
             {
                 "to": {
-                    "startLine": 555,
+                    "startLine": 554,
                     "startColumn": 4,
-                    "startOffset": 26298,
-                    "endLine": 557,
+                    "startOffset": 26087,
+                    "endLine": 560,
                     "endColumn": 12,
-                    "endOffset": 26442
+                    "endOffset": 26429
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3087,12 +3076,12 @@
             },
             {
                 "to": {
-                    "startLine": 558,
+                    "startLine": 561,
                     "startColumn": 4,
-                    "startOffset": 26447,
-                    "endLine": 564,
+                    "startOffset": 26434,
+                    "endLine": 572,
                     "endColumn": 12,
-                    "endOffset": 26789
+                    "endOffset": 27071
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3100,12 +3089,12 @@
             },
             {
                 "to": {
-                    "startLine": 565,
+                    "startLine": 573,
                     "startColumn": 4,
-                    "startOffset": 26794,
-                    "endLine": 576,
+                    "startOffset": 27076,
+                    "endLine": 575,
                     "endColumn": 12,
-                    "endOffset": 27431
+                    "endOffset": 27228
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3113,12 +3102,12 @@
             },
             {
                 "to": {
-                    "startLine": 577,
+                    "startLine": 576,
                     "startColumn": 4,
-                    "startOffset": 27436,
-                    "endLine": 579,
+                    "startOffset": 27233,
+                    "endLine": 584,
                     "endColumn": 12,
-                    "endOffset": 27588
+                    "endOffset": 27722
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3126,12 +3115,12 @@
             },
             {
                 "to": {
-                    "startLine": 580,
+                    "startLine": 585,
                     "startColumn": 4,
-                    "startOffset": 27593,
-                    "endLine": 588,
+                    "startOffset": 27727,
+                    "endLine": 595,
                     "endColumn": 12,
-                    "endOffset": 28082
+                    "endOffset": 28281
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3139,12 +3128,12 @@
             },
             {
                 "to": {
-                    "startLine": 589,
+                    "startLine": 596,
                     "startColumn": 4,
-                    "startOffset": 28087,
-                    "endLine": 599,
+                    "startOffset": 28286,
+                    "endLine": 601,
                     "endColumn": 12,
-                    "endOffset": 28641
+                    "endOffset": 28660
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3152,12 +3141,12 @@
             },
             {
                 "to": {
-                    "startLine": 600,
+                    "startLine": 602,
                     "startColumn": 4,
-                    "startOffset": 28646,
-                    "endLine": 605,
+                    "startOffset": 28665,
+                    "endLine": 608,
                     "endColumn": 12,
-                    "endOffset": 29020
+                    "endOffset": 29014
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3165,12 +3154,12 @@
             },
             {
                 "to": {
-                    "startLine": 606,
+                    "startLine": 609,
                     "startColumn": 4,
-                    "startOffset": 29025,
-                    "endLine": 612,
+                    "startOffset": 29019,
+                    "endLine": 615,
                     "endColumn": 12,
-                    "endOffset": 29374
+                    "endOffset": 29375
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3178,12 +3167,12 @@
             },
             {
                 "to": {
-                    "startLine": 613,
+                    "startLine": 616,
                     "startColumn": 4,
-                    "startOffset": 29379,
-                    "endLine": 619,
+                    "startOffset": 29380,
+                    "endLine": 621,
                     "endColumn": 12,
-                    "endOffset": 29735
+                    "endOffset": 29689
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3191,12 +3180,12 @@
             },
             {
                 "to": {
-                    "startLine": 620,
+                    "startLine": 622,
                     "startColumn": 4,
-                    "startOffset": 29740,
-                    "endLine": 625,
+                    "startOffset": 29694,
+                    "endLine": 628,
                     "endColumn": 12,
-                    "endOffset": 30049
+                    "endOffset": 30061
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3204,12 +3193,12 @@
             },
             {
                 "to": {
-                    "startLine": 626,
+                    "startLine": 629,
                     "startColumn": 4,
-                    "startOffset": 30054,
-                    "endLine": 632,
+                    "startOffset": 30066,
+                    "endLine": 635,
                     "endColumn": 12,
-                    "endOffset": 30421
+                    "endOffset": 30420
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3217,12 +3206,12 @@
             },
             {
                 "to": {
-                    "startLine": 633,
+                    "startLine": 636,
                     "startColumn": 4,
-                    "startOffset": 30426,
-                    "endLine": 639,
+                    "startOffset": 30425,
+                    "endLine": 638,
                     "endColumn": 12,
-                    "endOffset": 30780
+                    "endOffset": 30561
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3230,12 +3219,12 @@
             },
             {
                 "to": {
-                    "startLine": 640,
+                    "startLine": 639,
                     "startColumn": 4,
-                    "startOffset": 30785,
-                    "endLine": 642,
+                    "startOffset": 30566,
+                    "endLine": 649,
                     "endColumn": 12,
-                    "endOffset": 30921
+                    "endOffset": 31117
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3243,12 +3232,12 @@
             },
             {
                 "to": {
-                    "startLine": 643,
+                    "startLine": 650,
                     "startColumn": 4,
-                    "startOffset": 30926,
+                    "startOffset": 31122,
                     "endLine": 653,
                     "endColumn": 12,
-                    "endOffset": 31477
+                    "endOffset": 31280
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3258,10 +3247,10 @@
                 "to": {
                     "startLine": 654,
                     "startColumn": 4,
-                    "startOffset": 31482,
+                    "startOffset": 31285,
                     "endLine": 657,
                     "endColumn": 12,
-                    "endOffset": 31640
+                    "endOffset": 31446
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3271,10 +3260,10 @@
                 "to": {
                     "startLine": 658,
                     "startColumn": 4,
-                    "startOffset": 31645,
+                    "startOffset": 31451,
                     "endLine": 661,
                     "endColumn": 12,
-                    "endOffset": 31806
+                    "endOffset": 31624
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3284,10 +3273,10 @@
                 "to": {
                     "startLine": 662,
                     "startColumn": 4,
-                    "startOffset": 31811,
+                    "startOffset": 31629,
                     "endLine": 665,
                     "endColumn": 12,
-                    "endOffset": 31984
+                    "endOffset": 31798
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3297,10 +3286,10 @@
                 "to": {
                     "startLine": 666,
                     "startColumn": 4,
-                    "startOffset": 31989,
-                    "endLine": 669,
+                    "startOffset": 31803,
+                    "endLine": 668,
                     "endColumn": 12,
-                    "endOffset": 32158
+                    "endOffset": 31911
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3308,12 +3297,12 @@
             },
             {
                 "to": {
-                    "startLine": 670,
+                    "startLine": 669,
                     "startColumn": 4,
-                    "startOffset": 32163,
-                    "endLine": 672,
+                    "startOffset": 31916,
+                    "endLine": 674,
                     "endColumn": 12,
-                    "endOffset": 32271
+                    "endOffset": 32212
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3321,12 +3310,12 @@
             },
             {
                 "to": {
-                    "startLine": 673,
+                    "startLine": 675,
                     "startColumn": 4,
-                    "startOffset": 32276,
-                    "endLine": 678,
+                    "startOffset": 32217,
+                    "endLine": 685,
                     "endColumn": 12,
-                    "endOffset": 32572
+                    "endOffset": 32784
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3334,12 +3323,12 @@
             },
             {
                 "to": {
-                    "startLine": 679,
+                    "startLine": 686,
                     "startColumn": 4,
-                    "startOffset": 32577,
+                    "startOffset": 32789,
                     "endLine": 689,
                     "endColumn": 12,
-                    "endOffset": 33144
+                    "endOffset": 32982
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3349,10 +3338,10 @@
                 "to": {
                     "startLine": 690,
                     "startColumn": 4,
-                    "startOffset": 33149,
+                    "startOffset": 32987,
                     "endLine": 693,
                     "endColumn": 12,
-                    "endOffset": 33342
+                    "endOffset": 33178
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3362,10 +3351,10 @@
                 "to": {
                     "startLine": 694,
                     "startColumn": 4,
-                    "startOffset": 33347,
+                    "startOffset": 33183,
                     "endLine": 697,
                     "endColumn": 12,
-                    "endOffset": 33538
+                    "endOffset": 33374
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3375,10 +3364,10 @@
                 "to": {
                     "startLine": 698,
                     "startColumn": 4,
-                    "startOffset": 33543,
+                    "startOffset": 33379,
                     "endLine": 701,
                     "endColumn": 12,
-                    "endOffset": 33734
+                    "endOffset": 33568
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3388,10 +3377,10 @@
                 "to": {
                     "startLine": 702,
                     "startColumn": 4,
-                    "startOffset": 33739,
+                    "startOffset": 33573,
                     "endLine": 705,
                     "endColumn": 12,
-                    "endOffset": 33928
+                    "endOffset": 33764
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3401,10 +3390,10 @@
                 "to": {
                     "startLine": 706,
                     "startColumn": 4,
-                    "startOffset": 33933,
+                    "startOffset": 33769,
                     "endLine": 709,
                     "endColumn": 12,
-                    "endOffset": 34124
+                    "endOffset": 33958
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3414,10 +3403,10 @@
                 "to": {
                     "startLine": 710,
                     "startColumn": 4,
-                    "startOffset": 34129,
+                    "startOffset": 33963,
                     "endLine": 713,
                     "endColumn": 12,
-                    "endOffset": 34318
+                    "endOffset": 34152
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3427,10 +3416,10 @@
                 "to": {
                     "startLine": 714,
                     "startColumn": 4,
-                    "startOffset": 34323,
+                    "startOffset": 34157,
                     "endLine": 717,
                     "endColumn": 12,
-                    "endOffset": 34512
+                    "endOffset": 34344
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3440,10 +3429,10 @@
                 "to": {
                     "startLine": 718,
                     "startColumn": 4,
-                    "startOffset": 34517,
-                    "endLine": 721,
+                    "startOffset": 34349,
+                    "endLine": 722,
                     "endColumn": 12,
-                    "endOffset": 34704
+                    "endOffset": 34589
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3451,12 +3440,12 @@
             },
             {
                 "to": {
-                    "startLine": 722,
+                    "startLine": 723,
                     "startColumn": 4,
-                    "startOffset": 34709,
-                    "endLine": 726,
+                    "startOffset": 34594,
+                    "endLine": 730,
                     "endColumn": 12,
-                    "endOffset": 34949
+                    "endOffset": 34956
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3464,33 +3453,12 @@
             },
             {
                 "to": {
-                    "startLine": 727,
+                    "startLine": 731,
                     "startColumn": 4,
-                    "startOffset": 34954,
-                    "endLine": 734,
+                    "startOffset": 34961,
+                    "endLine": 733,
                     "endColumn": 12,
-                    "endOffset": 35365
-                },
-                "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 727,
-                        "startColumn": 4,
-                        "startOffset": 34954,
-                        "endLine": 734,
-                        "endColumn": 12,
-                        "endOffset": 35365
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 735,
-                    "startColumn": 4,
-                    "startOffset": 35370,
-                    "endLine": 737,
-                    "endColumn": 12,
-                    "endOffset": 35492
+                    "endOffset": 35083
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3498,12 +3466,12 @@
             },
             {
                 "to": {
-                    "startLine": 738,
+                    "startLine": 734,
                     "startColumn": 4,
-                    "startOffset": 35497,
-                    "endLine": 740,
+                    "startOffset": 35088,
+                    "endLine": 736,
                     "endColumn": 12,
-                    "endOffset": 35615
+                    "endOffset": 35206
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3511,12 +3479,12 @@
             },
             {
                 "to": {
-                    "startLine": 741,
+                    "startLine": 737,
                     "startColumn": 4,
-                    "startOffset": 35620,
-                    "endLine": 743,
+                    "startOffset": 35211,
+                    "endLine": 739,
                     "endColumn": 12,
-                    "endOffset": 35727
+                    "endOffset": 35318
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3524,12 +3492,12 @@
             },
             {
                 "to": {
-                    "startLine": 744,
+                    "startLine": 740,
                     "startColumn": 4,
-                    "startOffset": 35732,
-                    "endLine": 746,
+                    "startOffset": 35323,
+                    "endLine": 742,
                     "endColumn": 12,
-                    "endOffset": 35862
+                    "endOffset": 35453
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3537,12 +3505,25 @@
             },
             {
                 "to": {
-                    "startLine": 747,
+                    "startLine": 743,
                     "startColumn": 4,
-                    "startOffset": 35867,
+                    "startOffset": 35458,
+                    "endLine": 745,
+                    "endColumn": 12,
+                    "endOffset": 35566
+                },
+                "from": {
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 746,
+                    "startColumn": 4,
+                    "startOffset": 35571,
                     "endLine": 749,
                     "endColumn": 12,
-                    "endOffset": 35975
+                    "endOffset": 35735
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3552,10 +3533,10 @@
                 "to": {
                     "startLine": 750,
                     "startColumn": 4,
-                    "startOffset": 35980,
+                    "startOffset": 35740,
                     "endLine": 753,
                     "endColumn": 12,
-                    "endOffset": 36144
+                    "endOffset": 35903
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3565,10 +3546,10 @@
                 "to": {
                     "startLine": 754,
                     "startColumn": 4,
-                    "startOffset": 36149,
-                    "endLine": 757,
+                    "startOffset": 35908,
+                    "endLine": 760,
                     "endColumn": 12,
-                    "endOffset": 36312
+                    "endOffset": 36242
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3576,12 +3557,12 @@
             },
             {
                 "to": {
-                    "startLine": 758,
+                    "startLine": 761,
                     "startColumn": 4,
-                    "startOffset": 36317,
-                    "endLine": 764,
+                    "startOffset": 36247,
+                    "endLine": 770,
                     "endColumn": 12,
-                    "endOffset": 36651
+                    "endOffset": 36786
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3589,12 +3570,12 @@
             },
             {
                 "to": {
-                    "startLine": 765,
+                    "startLine": 771,
                     "startColumn": 4,
-                    "startOffset": 36656,
+                    "startOffset": 36791,
                     "endLine": 774,
                     "endColumn": 12,
-                    "endOffset": 37195
+                    "endOffset": 36995
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3604,10 +3585,10 @@
                 "to": {
                     "startLine": 775,
                     "startColumn": 4,
-                    "startOffset": 37200,
-                    "endLine": 778,
+                    "startOffset": 37000,
+                    "endLine": 780,
                     "endColumn": 12,
-                    "endOffset": 37404
+                    "endOffset": 37353
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3615,12 +3596,12 @@
             },
             {
                 "to": {
-                    "startLine": 779,
+                    "startLine": 781,
                     "startColumn": 4,
-                    "startOffset": 37409,
-                    "endLine": 784,
+                    "startOffset": 37358,
+                    "endLine": 786,
                     "endColumn": 12,
-                    "endOffset": 37762
+                    "endOffset": 37639
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3628,12 +3609,12 @@
             },
             {
                 "to": {
-                    "startLine": 785,
+                    "startLine": 787,
                     "startColumn": 4,
-                    "startOffset": 37767,
-                    "endLine": 790,
+                    "startOffset": 37644,
+                    "endLine": 794,
                     "endColumn": 12,
-                    "endOffset": 38048
+                    "endOffset": 38022
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3641,12 +3622,12 @@
             },
             {
                 "to": {
-                    "startLine": 791,
+                    "startLine": 795,
                     "startColumn": 4,
-                    "startOffset": 38053,
-                    "endLine": 798,
+                    "startOffset": 38027,
+                    "endLine": 801,
                     "endColumn": 12,
-                    "endOffset": 38431
+                    "endOffset": 38388
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3654,12 +3635,12 @@
             },
             {
                 "to": {
-                    "startLine": 799,
+                    "startLine": 802,
                     "startColumn": 4,
-                    "startOffset": 38436,
-                    "endLine": 805,
+                    "startOffset": 38393,
+                    "endLine": 807,
                     "endColumn": 12,
-                    "endOffset": 38797
+                    "endOffset": 38658
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3667,12 +3648,12 @@
             },
             {
                 "to": {
-                    "startLine": 806,
+                    "startLine": 808,
                     "startColumn": 4,
-                    "startOffset": 38802,
-                    "endLine": 811,
+                    "startOffset": 38663,
+                    "endLine": 812,
                     "endColumn": 12,
-                    "endOffset": 39067
+                    "endOffset": 38890
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3680,12 +3661,12 @@
             },
             {
                 "to": {
-                    "startLine": 812,
+                    "startLine": 813,
                     "startColumn": 4,
-                    "startOffset": 39072,
-                    "endLine": 816,
+                    "startOffset": 38895,
+                    "endLine": 825,
                     "endColumn": 12,
-                    "endOffset": 39299
+                    "endOffset": 39595
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3693,12 +3674,12 @@
             },
             {
                 "to": {
-                    "startLine": 817,
+                    "startLine": 826,
                     "startColumn": 4,
-                    "startOffset": 39304,
-                    "endLine": 829,
+                    "startOffset": 39600,
+                    "endLine": 837,
                     "endColumn": 12,
-                    "endOffset": 40004
+                    "endOffset": 40226
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3706,12 +3687,12 @@
             },
             {
                 "to": {
-                    "startLine": 830,
+                    "startLine": 838,
                     "startColumn": 4,
-                    "startOffset": 40009,
-                    "endLine": 841,
+                    "startOffset": 40231,
+                    "endLine": 843,
                     "endColumn": 12,
-                    "endOffset": 40635
+                    "endOffset": 40510
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3719,12 +3700,12 @@
             },
             {
                 "to": {
-                    "startLine": 842,
+                    "startLine": 844,
                     "startColumn": 4,
-                    "startOffset": 40640,
-                    "endLine": 847,
+                    "startOffset": 40515,
+                    "endLine": 856,
                     "endColumn": 12,
-                    "endOffset": 40919
+                    "endOffset": 41214
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3732,12 +3713,12 @@
             },
             {
                 "to": {
-                    "startLine": 848,
+                    "startLine": 857,
                     "startColumn": 4,
-                    "startOffset": 40924,
-                    "endLine": 860,
+                    "startOffset": 41219,
+                    "endLine": 868,
                     "endColumn": 12,
-                    "endOffset": 41623
+                    "endOffset": 41844
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3745,12 +3726,12 @@
             },
             {
                 "to": {
-                    "startLine": 861,
+                    "startLine": 869,
                     "startColumn": 4,
-                    "startOffset": 41628,
-                    "endLine": 872,
+                    "startOffset": 41849,
+                    "endLine": 874,
                     "endColumn": 12,
-                    "endOffset": 42253
+                    "endOffset": 42125
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3758,12 +3739,12 @@
             },
             {
                 "to": {
-                    "startLine": 873,
+                    "startLine": 875,
                     "startColumn": 4,
-                    "startOffset": 42258,
-                    "endLine": 878,
+                    "startOffset": 42130,
+                    "endLine": 880,
                     "endColumn": 12,
-                    "endOffset": 42534
+                    "endOffset": 42407
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3771,12 +3752,12 @@
             },
             {
                 "to": {
-                    "startLine": 879,
+                    "startLine": 881,
                     "startColumn": 4,
-                    "startOffset": 42539,
-                    "endLine": 884,
+                    "startOffset": 42412,
+                    "endLine": 893,
                     "endColumn": 12,
-                    "endOffset": 42816
+                    "endOffset": 43113
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3784,12 +3765,12 @@
             },
             {
                 "to": {
-                    "startLine": 885,
+                    "startLine": 894,
                     "startColumn": 4,
-                    "startOffset": 42821,
-                    "endLine": 897,
+                    "startOffset": 43118,
+                    "endLine": 905,
                     "endColumn": 12,
-                    "endOffset": 43522
+                    "endOffset": 43741
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3797,12 +3778,12 @@
             },
             {
                 "to": {
-                    "startLine": 898,
+                    "startLine": 906,
                     "startColumn": 4,
-                    "startOffset": 43527,
+                    "startOffset": 43746,
                     "endLine": 909,
                     "endColumn": 12,
-                    "endOffset": 44150
+                    "endOffset": 43908
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3812,10 +3793,10 @@
                 "to": {
                     "startLine": 910,
                     "startColumn": 4,
-                    "startOffset": 44155,
-                    "endLine": 913,
+                    "startOffset": 43913,
+                    "endLine": 912,
                     "endColumn": 12,
-                    "endOffset": 44317
+                    "endOffset": 44029
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3823,12 +3804,12 @@
             },
             {
                 "to": {
-                    "startLine": 914,
+                    "startLine": 913,
                     "startColumn": 4,
-                    "startOffset": 44322,
-                    "endLine": 916,
+                    "startOffset": 44034,
+                    "endLine": 915,
                     "endColumn": 12,
-                    "endOffset": 44438
+                    "endOffset": 44153
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3836,12 +3817,12 @@
             },
             {
                 "to": {
-                    "startLine": 917,
+                    "startLine": 916,
                     "startColumn": 4,
-                    "startOffset": 44443,
-                    "endLine": 919,
+                    "startOffset": 44158,
+                    "endLine": 918,
                     "endColumn": 12,
-                    "endOffset": 44562
+                    "endOffset": 44277
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3849,12 +3830,12 @@
             },
             {
                 "to": {
-                    "startLine": 920,
+                    "startLine": 919,
                     "startColumn": 4,
-                    "startOffset": 44567,
-                    "endLine": 922,
+                    "startOffset": 44282,
+                    "endLine": 921,
                     "endColumn": 12,
-                    "endOffset": 44686
+                    "endOffset": 44400
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3862,12 +3843,12 @@
             },
             {
                 "to": {
-                    "startLine": 923,
+                    "startLine": 922,
                     "startColumn": 4,
-                    "startOffset": 44691,
-                    "endLine": 925,
+                    "startOffset": 44405,
+                    "endLine": 924,
                     "endColumn": 12,
-                    "endOffset": 44809
+                    "endOffset": 44526
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3875,12 +3856,12 @@
             },
             {
                 "to": {
-                    "startLine": 926,
+                    "startLine": 925,
                     "startColumn": 4,
-                    "startOffset": 44814,
-                    "endLine": 928,
+                    "startOffset": 44531,
+                    "endLine": 927,
                     "endColumn": 12,
-                    "endOffset": 44935
+                    "endOffset": 44652
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3888,12 +3869,12 @@
             },
             {
                 "to": {
-                    "startLine": 929,
+                    "startLine": 928,
                     "startColumn": 4,
-                    "startOffset": 44940,
-                    "endLine": 931,
+                    "startOffset": 44657,
+                    "endLine": 930,
                     "endColumn": 12,
-                    "endOffset": 45061
+                    "endOffset": 44777
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3901,12 +3882,12 @@
             },
             {
                 "to": {
-                    "startLine": 932,
+                    "startLine": 931,
                     "startColumn": 4,
-                    "startOffset": 45066,
-                    "endLine": 934,
+                    "startOffset": 44782,
+                    "endLine": 933,
                     "endColumn": 12,
-                    "endOffset": 45186
+                    "endOffset": 44905
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3914,12 +3895,12 @@
             },
             {
                 "to": {
-                    "startLine": 935,
+                    "startLine": 934,
                     "startColumn": 4,
-                    "startOffset": 45191,
-                    "endLine": 937,
+                    "startOffset": 44910,
+                    "endLine": 936,
                     "endColumn": 12,
-                    "endOffset": 45314
+                    "endOffset": 45033
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3927,12 +3908,12 @@
             },
             {
                 "to": {
-                    "startLine": 938,
+                    "startLine": 937,
                     "startColumn": 4,
-                    "startOffset": 45319,
-                    "endLine": 940,
+                    "startOffset": 45038,
+                    "endLine": 939,
                     "endColumn": 12,
-                    "endOffset": 45442
+                    "endOffset": 45158
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3940,12 +3921,12 @@
             },
             {
                 "to": {
-                    "startLine": 941,
+                    "startLine": 940,
                     "startColumn": 4,
-                    "startOffset": 45447,
-                    "endLine": 943,
+                    "startOffset": 45163,
+                    "endLine": 942,
                     "endColumn": 12,
-                    "endOffset": 45567
+                    "endOffset": 45286
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3953,12 +3934,12 @@
             },
             {
                 "to": {
-                    "startLine": 944,
+                    "startLine": 943,
                     "startColumn": 4,
-                    "startOffset": 45572,
-                    "endLine": 946,
+                    "startOffset": 45291,
+                    "endLine": 945,
                     "endColumn": 12,
-                    "endOffset": 45695
+                    "endOffset": 45414
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3966,12 +3947,12 @@
             },
             {
                 "to": {
-                    "startLine": 947,
+                    "startLine": 946,
                     "startColumn": 4,
-                    "startOffset": 45700,
-                    "endLine": 949,
+                    "startOffset": 45419,
+                    "endLine": 948,
                     "endColumn": 12,
-                    "endOffset": 45823
+                    "endOffset": 45541
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3979,12 +3960,12 @@
             },
             {
                 "to": {
-                    "startLine": 950,
+                    "startLine": 949,
                     "startColumn": 4,
-                    "startOffset": 45828,
-                    "endLine": 952,
+                    "startOffset": 45546,
+                    "endLine": 951,
                     "endColumn": 12,
-                    "endOffset": 45950
+                    "endOffset": 45671
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -3992,12 +3973,12 @@
             },
             {
                 "to": {
-                    "startLine": 953,
+                    "startLine": 952,
                     "startColumn": 4,
-                    "startOffset": 45955,
-                    "endLine": 955,
+                    "startOffset": 45676,
+                    "endLine": 954,
                     "endColumn": 12,
-                    "endOffset": 46080
+                    "endOffset": 45799
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4005,12 +3986,12 @@
             },
             {
                 "to": {
-                    "startLine": 956,
+                    "startLine": 955,
                     "startColumn": 4,
-                    "startOffset": 46085,
-                    "endLine": 958,
+                    "startOffset": 45804,
+                    "endLine": 957,
                     "endColumn": 12,
-                    "endOffset": 46208
+                    "endOffset": 45929
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4018,12 +3999,12 @@
             },
             {
                 "to": {
-                    "startLine": 959,
+                    "startLine": 958,
                     "startColumn": 4,
-                    "startOffset": 46213,
-                    "endLine": 961,
+                    "startOffset": 45934,
+                    "endLine": 960,
                     "endColumn": 12,
-                    "endOffset": 46338
+                    "endOffset": 46054
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4031,12 +4012,12 @@
             },
             {
                 "to": {
-                    "startLine": 962,
+                    "startLine": 961,
                     "startColumn": 4,
-                    "startOffset": 46343,
-                    "endLine": 964,
+                    "startOffset": 46059,
+                    "endLine": 963,
                     "endColumn": 12,
-                    "endOffset": 46463
+                    "endOffset": 46182
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4044,12 +4025,12 @@
             },
             {
                 "to": {
-                    "startLine": 965,
+                    "startLine": 964,
                     "startColumn": 4,
-                    "startOffset": 46468,
-                    "endLine": 967,
+                    "startOffset": 46187,
+                    "endLine": 966,
                     "endColumn": 12,
-                    "endOffset": 46591
+                    "endOffset": 46308
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4057,12 +4038,12 @@
             },
             {
                 "to": {
-                    "startLine": 968,
+                    "startLine": 967,
                     "startColumn": 4,
-                    "startOffset": 46596,
-                    "endLine": 970,
+                    "startOffset": 46313,
+                    "endLine": 969,
                     "endColumn": 12,
-                    "endOffset": 46717
+                    "endOffset": 46436
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4070,12 +4051,12 @@
             },
             {
                 "to": {
-                    "startLine": 971,
+                    "startLine": 970,
                     "startColumn": 4,
-                    "startOffset": 46722,
-                    "endLine": 973,
+                    "startOffset": 46441,
+                    "endLine": 972,
                     "endColumn": 12,
-                    "endOffset": 46845
+                    "endOffset": 46543
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4083,12 +4064,12 @@
             },
             {
                 "to": {
-                    "startLine": 974,
+                    "startLine": 973,
                     "startColumn": 4,
-                    "startOffset": 46850,
-                    "endLine": 976,
+                    "startOffset": 46548,
+                    "endLine": 978,
                     "endColumn": 12,
-                    "endOffset": 46952
+                    "endOffset": 46842
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4096,33 +4077,12 @@
             },
             {
                 "to": {
-                    "startLine": 977,
+                    "startLine": 979,
                     "startColumn": 4,
-                    "startOffset": 46957,
-                    "endLine": 982,
+                    "startOffset": 46847,
+                    "endLine": 981,
                     "endColumn": 12,
-                    "endOffset": 47251
-                },
-                "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 977,
-                        "startColumn": 4,
-                        "startOffset": 46957,
-                        "endLine": 982,
-                        "endColumn": 12,
-                        "endOffset": 47251
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 983,
-                    "startColumn": 4,
-                    "startOffset": 47256,
-                    "endLine": 985,
-                    "endColumn": 12,
-                    "endOffset": 47378
+                    "endOffset": 46969
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4130,12 +4090,12 @@
             },
             {
                 "to": {
-                    "startLine": 986,
+                    "startLine": 982,
                     "startColumn": 4,
-                    "startOffset": 47383,
-                    "endLine": 994,
+                    "startOffset": 46974,
+                    "endLine": 990,
                     "endColumn": 12,
-                    "endOffset": 47870
+                    "endOffset": 47461
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4143,12 +4103,25 @@
             },
             {
                 "to": {
-                    "startLine": 995,
+                    "startLine": 991,
                     "startColumn": 4,
-                    "startOffset": 47875,
+                    "startOffset": 47466,
+                    "endLine": 999,
+                    "endColumn": 12,
+                    "endOffset": 47904
+                },
+                "from": {
+                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1000,
+                    "startColumn": 4,
+                    "startOffset": 47909,
                     "endLine": 1003,
                     "endColumn": 12,
-                    "endOffset": 48313
+                    "endOffset": 48093
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4158,10 +4131,10 @@
                 "to": {
                     "startLine": 1004,
                     "startColumn": 4,
-                    "startOffset": 48318,
-                    "endLine": 1007,
+                    "startOffset": 48098,
+                    "endLine": 1015,
                     "endColumn": 12,
-                    "endOffset": 48502
+                    "endOffset": 48723
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4169,12 +4142,12 @@
             },
             {
                 "to": {
-                    "startLine": 1008,
+                    "startLine": 1016,
                     "startColumn": 4,
-                    "startOffset": 48507,
-                    "endLine": 1019,
+                    "startOffset": 48728,
+                    "endLine": 1018,
                     "endColumn": 12,
-                    "endOffset": 49132
+                    "endOffset": 48854
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4182,12 +4155,12 @@
             },
             {
                 "to": {
-                    "startLine": 1020,
+                    "startLine": 1019,
                     "startColumn": 4,
-                    "startOffset": 49137,
-                    "endLine": 1022,
+                    "startOffset": 48859,
+                    "endLine": 1021,
                     "endColumn": 12,
-                    "endOffset": 49263
+                    "endOffset": 48972
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4195,12 +4168,12 @@
             },
             {
                 "to": {
-                    "startLine": 1023,
+                    "startLine": 1022,
                     "startColumn": 4,
-                    "startOffset": 49268,
-                    "endLine": 1025,
+                    "startOffset": 48977,
+                    "endLine": 1029,
                     "endColumn": 12,
-                    "endOffset": 49381
+                    "endOffset": 49389
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4208,12 +4181,12 @@
             },
             {
                 "to": {
-                    "startLine": 1026,
+                    "startLine": 1030,
                     "startColumn": 4,
-                    "startOffset": 49386,
-                    "endLine": 1033,
+                    "startOffset": 49394,
+                    "endLine": 1032,
                     "endColumn": 12,
-                    "endOffset": 49798
+                    "endOffset": 49523
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4221,12 +4194,12 @@
             },
             {
                 "to": {
-                    "startLine": 1034,
+                    "startLine": 1033,
                     "startColumn": 4,
-                    "startOffset": 49803,
-                    "endLine": 1036,
+                    "startOffset": 49528,
+                    "endLine": 1035,
                     "endColumn": 12,
-                    "endOffset": 49932
+                    "endOffset": 49687
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4234,12 +4207,12 @@
             },
             {
                 "to": {
-                    "startLine": 1037,
+                    "startLine": 1036,
                     "startColumn": 4,
-                    "startOffset": 49937,
-                    "endLine": 1039,
+                    "startOffset": 49692,
+                    "endLine": 1046,
                     "endColumn": 12,
-                    "endOffset": 50096
+                    "endOffset": 50275
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4247,12 +4220,12 @@
             },
             {
                 "to": {
-                    "startLine": 1040,
+                    "startLine": 1047,
                     "startColumn": 4,
-                    "startOffset": 50101,
-                    "endLine": 1050,
+                    "startOffset": 50280,
+                    "endLine": 1049,
                     "endColumn": 12,
-                    "endOffset": 50684
+                    "endOffset": 50431
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4260,12 +4233,12 @@
             },
             {
                 "to": {
-                    "startLine": 1051,
+                    "startLine": 1050,
                     "startColumn": 4,
-                    "startOffset": 50689,
-                    "endLine": 1053,
+                    "startOffset": 50436,
+                    "endLine": 1052,
                     "endColumn": 12,
-                    "endOffset": 50840
+                    "endOffset": 50583
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4273,12 +4246,12 @@
             },
             {
                 "to": {
-                    "startLine": 1054,
+                    "startLine": 1053,
                     "startColumn": 4,
-                    "startOffset": 50845,
-                    "endLine": 1056,
+                    "startOffset": 50588,
+                    "endLine": 1055,
                     "endColumn": 12,
-                    "endOffset": 50992
+                    "endOffset": 50737
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4286,12 +4259,12 @@
             },
             {
                 "to": {
-                    "startLine": 1057,
+                    "startLine": 1056,
                     "startColumn": 4,
-                    "startOffset": 50997,
-                    "endLine": 1059,
+                    "startOffset": 50742,
+                    "endLine": 1063,
                     "endColumn": 12,
-                    "endOffset": 51146
+                    "endOffset": 51150
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4299,12 +4272,12 @@
             },
             {
                 "to": {
-                    "startLine": 1060,
+                    "startLine": 1064,
                     "startColumn": 4,
-                    "startOffset": 51151,
-                    "endLine": 1067,
+                    "startOffset": 51155,
+                    "endLine": 1073,
                     "endColumn": 12,
-                    "endOffset": 51559
+                    "endOffset": 51688
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4312,12 +4285,12 @@
             },
             {
                 "to": {
-                    "startLine": 1068,
+                    "startLine": 1074,
                     "startColumn": 4,
-                    "startOffset": 51564,
-                    "endLine": 1077,
+                    "startOffset": 51693,
+                    "endLine": 1081,
                     "endColumn": 12,
-                    "endOffset": 52097
+                    "endOffset": 52089
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4325,12 +4298,12 @@
             },
             {
                 "to": {
-                    "startLine": 1078,
+                    "startLine": 1082,
                     "startColumn": 4,
-                    "startOffset": 52102,
+                    "startOffset": 52094,
                     "endLine": 1085,
                     "endColumn": 12,
-                    "endOffset": 52498
+                    "endOffset": 52315
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4340,10 +4313,10 @@
                 "to": {
                     "startLine": 1086,
                     "startColumn": 4,
-                    "startOffset": 52503,
-                    "endLine": 1089,
+                    "startOffset": 52320,
+                    "endLine": 1097,
                     "endColumn": 12,
-                    "endOffset": 52724
+                    "endOffset": 52711
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4351,33 +4324,12 @@
             },
             {
                 "to": {
-                    "startLine": 1090,
+                    "startLine": 1098,
                     "startColumn": 4,
-                    "startOffset": 52729,
-                    "endLine": 1104,
+                    "startOffset": 52716,
+                    "endLine": 1103,
                     "endColumn": 12,
-                    "endOffset": 53378
-                },
-                "from": {
-                    "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 1090,
-                        "startColumn": 4,
-                        "startOffset": 52729,
-                        "endLine": 1104,
-                        "endColumn": 12,
-                        "endOffset": 53378
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1105,
-                    "startColumn": 4,
-                    "startOffset": 53383,
-                    "endLine": 1110,
-                    "endColumn": 12,
-                    "endOffset": 53657
+                    "endOffset": 52990
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4385,12 +4337,12 @@
             },
             {
                 "to": {
-                    "startLine": 1111,
+                    "startLine": 1104,
                     "startColumn": 4,
-                    "startOffset": 53662,
-                    "endLine": 1114,
+                    "startOffset": 52995,
+                    "endLine": 1107,
                     "endColumn": 12,
-                    "endOffset": 53825
+                    "endOffset": 53158
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
@@ -4398,12 +4350,12 @@
             },
             {
                 "to": {
-                    "startLine": 1115,
+                    "startLine": 1108,
                     "startColumn": 4,
-                    "startOffset": 53830,
-                    "endLine": 1118,
+                    "startOffset": 53163,
+                    "endLine": 1111,
                     "endColumn": 12,
-                    "endOffset": 53992
+                    "endOffset": 53325
                 },
                 "from": {
                     "file": "D:\\TIPS\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"

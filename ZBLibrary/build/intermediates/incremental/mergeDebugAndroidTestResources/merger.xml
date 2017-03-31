@@ -403,7 +403,7 @@
     </style><string name="xlistview_footer_hint_normal">查看更多</string><style name="btn_bottom_white" parent="btn_bottom">
         <item name="android:background">@drawable/bg_white_to_gray</item>
         <item name="android:textColor">@color/blue</item>
-    </style><color name="topbar_bg">#33cc99</color><string name="no_sdcard">请插入SD卡</string><style name="ActivityDialog" parent="@android:style/Theme.Holo.DialogWhenLarge">
+    </style><color name="topbar_bg">#29BE63</color><string name="no_sdcard">请插入SD卡</string><style name="ActivityDialog" parent="@android:style/Theme.Holo.DialogWhenLarge">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@color/alpha_complete</item>
         <item name="android:windowIsTranslucent">true</item>

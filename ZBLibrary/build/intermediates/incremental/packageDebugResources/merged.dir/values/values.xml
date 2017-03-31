@@ -99,7 +99,7 @@
     <color name="red_text">#ff3d01</color>
     <color name="silver">#c0c0c0</color>
     <color name="title_bg">#ff54acea</color>
-    <color name="topbar_bg">#33cc99</color>
+    <color name="topbar_bg">#29BE63</color>
     <color name="topbar_bg_black">#272e2a</color>
     <color name="topbar_bg_white">#ffffffff</color>
     <color name="transparent">#00000000</color>
@@ -243,14 +243,10 @@
         <item name="android:windowBackground">@color/alpha_complete</item>
     </style>
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+        
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
     <style name="MyDialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -276,10 +272,10 @@
         <item name="android:layout_height">fill_parent</item>
         <item name="android:background">@color/activity_bg</item>
         <item name="android:orientation">vertical</item>
-        <!-- 状态栏沉浸 <<<<<<<<<<<<<<<<< -->
+        
         <item name="android:clipToPadding">true</item>
         <item name="android:fitsSystemWindows">true</item>
-        <!-- 状态栏沉浸 >>>>>>>>>>>>>>>>> -->
+        
     </style>
     <style name="blank">
         <item name="android:layout_width">match_parent</item>
@@ -729,7 +725,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <!-- <item name="android:padding">10dp</item> -->
+        
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/bg_item_to_alpha</item>
     </style>
@@ -1090,14 +1086,11 @@
     </style>
     <style name="translucentAnimation">
 
-        <!-- 切入切出时也会进行的动画，当底部界面均为透明界面时，动画会被桌面遮挡 -->
-        <!--
-        <item name="android:windowEnterAnimation">@anim/slide_right_in</item>
-        <item name="android:windowExitAnimation">@anim/transparent_to_zero</item>
-        -->
+        
+        
 
 
-        <!-- 若底部界面均为透明界面时，以下动画会失效，也会受其他应用影响 -->
+        
         <item name="android:activityOpenEnterAnimation">@anim/right_push_in</item>
         <item name="android:activityOpenExitAnimation">@anim/hold</item>
         <item name="android:activityCloseEnterAnimation">@anim/left_push_in</item>
