@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.tips.zy.tips.AddPeople.Adapter.AddPeopleAdapter;
+import com.tips.zy.tips.AddPeople.Entity.PeopleHobby;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
 import com.tips.zy.tips.Main.Activity.SearchActivity;
 import com.tips.zy.tips.R;
 
@@ -47,25 +49,22 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
         viewpager= (ViewPager) findViewById(R.id.container);
 
         Map<String,Object>map1=new HashMap<String, Object>();
-        map1.put("title", "第一个Activity");
-        map1.put("view", getView((String) map1.get("title"), new Intent(this, SearchActivity.class)));
+        map1.put("title", "基本信息");
+        map1.put("view", getView((String) map1.get("title"), new Intent(this, PeopleInfoActivity.class)));
         viewlist.add(map1);
         Map<String,Object>map2=new HashMap<String, Object>();
-        map2.put("title","第二个Activity");
-        map2.put("view", getView((String) map2.get("title"), new Intent(this, SearchActivity.class)));
+        map2.put("title","工作");
+        map2.put("view", getView((String) map2.get("title"), new Intent(this, PeopleWorkActivity.class)));
         viewlist.add(map2);
         Map<String,Object>map3=new HashMap<String, Object>();
-        map3.put("title","第三个Activity");
-        map3.put("view", getView((String) map3.get("title"), new Intent(this, SearchActivity.class)));
+        map3.put("title","爱好");
+        map3.put("view", getView((String) map3.get("title"), new Intent(this, PeopleHobbyActivity.class)));
         viewlist.add(map3);
         Map<String,Object>map4=new HashMap<String, Object>();
-        map4.put("title","第三个Activity");
-        map4.put("view", getView((String) map4.get("title"), new Intent(this, SearchActivity.class)));
+        map4.put("title","性格");
+        map4.put("view", getView((String) map4.get("title"), new Intent(this, PeopleCharacterActivity.class)));
         viewlist.add(map4);
-        Map<String,Object>map5=new HashMap<String, Object>();
-        map5.put("title","第四个Activity");
-        map5.put("view", getView((String) map5.get("title"), new Intent(this, SearchActivity.class)));
-        viewlist.add(map5);
+
 
         AddPeopleAdapter addPeopleAdapter=new AddPeopleAdapter(viewlist,getSupportFragmentManager());
         tabLayout.setTabsFromPagerAdapter(addPeopleAdapter);

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-20dp"
+    style="@style/activity_page">
+    <ScrollView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/P_Name"
+                    android:textColor="@color/black_slight"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="请输入姓名"
+                    android:textColor="@color/gray_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="性别"
+                    android:textColor="@color/black_slight"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/btn1"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/man"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/btn2"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/woman"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+            <!--性别-->
+            <!--电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:textColor="@color/gray_1"
+                    android:text="请在这里输入"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--电话-->
+            <!--邮件-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="邮件"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:textColor="@color/gray_1"
+                    android:text="请在这里输入"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--邮件-->
+            <!--生日-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="生日"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="left"
+                    android:text="请选择生日"
+                    android:textColor="@color/gray_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@mipmap/jiantou"
+                    android:layout_margin="6dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <!--生日-->
+            <!--地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="住址"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="left"
+                    android:text="请选择住址"
+                    android:textColor="@color/gray_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@mipmap/jiantou"
+                    android:layout_margin="6dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+            <!--地址-->
+            <!--民族-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="民族"
+                    android:textColor="@color/black_slight"
+                    android:textSize="10dp" />
+
+                    <Button
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/P_National"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/man"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+
+            </LinearLayout>
+            <!--民族-->
+            <!--信仰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="信仰"
+                    android:textColor="@color/black_slight"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="佛教"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="道教"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="基督教"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                </RadioGroup>
+                </LinearLayout>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="伊斯兰教"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="妈祖"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                    <RadioButton
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="自定义"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+            <!--信仰-->
+            <!--学历-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="学历"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="left"
+                    android:text="请选择学历"
+                    android:textColor="@color/gray_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@mipmap/jiantou"
+                    android:layout_margin="6dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+            <!--学历-->
+            <!--备注-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="6dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textColor="@color/black_slight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:textSize="16dp"
+                    android:background="@color/AppBackgroud"
+                    android:textColor="@color/gray_1"
+                    android:text="请在这里输入"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--备注-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

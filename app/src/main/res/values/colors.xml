@@ -9,4 +9,7 @@
     <color name="Search_Back">#DBDBDB</color>
 
     <color name="Wite">#FFFFFF</color>
+    <color name="AppBackgroud">#F8F8F8</color>
+    <color name="gray_Line">#e6e6e6</color>
+    <color name="gray_button_back">#dbdbdb</color>
 </resources>

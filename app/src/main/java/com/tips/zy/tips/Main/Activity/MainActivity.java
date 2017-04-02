@@ -1,5 +1,6 @@
 package com.tips.zy.tips.Main.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -12,13 +13,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.tips.zy.tips.AddPeople.Activity.AddPeopleActivity;
+import com.tips.zy.tips.Login.Activity.UserActivity;
 import com.tips.zy.tips.Main.Adapter.PinnedHeaderExpandableAdapter;
 import com.tips.zy.tips.Main.View.PinnedHeaderExpandableListView;
+import com.tips.zy.tips.Other.Activity.BackActivity;
+import com.tips.zy.tips.Other.Activity.ScanActivity;
 import com.tips.zy.tips.R;
+
+import zuo.biao.library.ui.WebViewActivity;
+import zuo.biao.library.util.CommonUtil;
+import zuo.biao.library.util.Log;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener ,View.OnClickListener{
@@ -31,12 +40,14 @@ public class MainActivity extends AppCompatActivity
     private PinnedHeaderExpandableAdapter adapter;
 
     private LinearLayout search;
+    private ImageView userImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("分组管理");
         setSupportActionBar(toolbar);
         init();
         initData();
@@ -72,6 +83,10 @@ public class MainActivity extends AppCompatActivity
 
         search= (LinearLayout) findViewById(R.id.search);
         search.setOnClickListener(this);
+        View headerLayout = navigationView.inflateHeaderView(R.layout.nav_header_main);
+        userImage= (ImageView) headerLayout.findViewById(R.id.imageView);
+
+        userImage.setOnClickListener(this);
     }
     private void initData() {
         for(int i=0;i<10;i++){
@@ -144,19 +159,20 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.Group) {
             // Handle the camera action
         } else if (id == R.id.AddPeople) {
-
+            startActivity(AddPeopleActivity.createIntent(MainActivity.this));
         } else if (id == R.id.BusinessCard) {
-
+            startActivity(ScanActivity.createIntent(MainActivity.this));
         } else if (id == R.id.Share) {
+            CommonUtil.shareInfo(MainActivity.this, getString(R.string.share_app) + "\n 点击链接直接查看ZBLibrary\n" + "占时无下载地址");
 
         } else if (id == R.id.Back) {
-
+            startActivity(BackActivity.CreateIntent(MainActivity.this));
         } else if (id == R.id.Upload) {
-
+            Toast.makeText(MainActivity.this,"云端接口占时未开放",Toast.LENGTH_LONG).show();
         }else if (id == R.id.AboutUs) {
 
         }else if (id == R.id.UpdateLog) {
-
+            toActivity(WebViewActivity.createIntent(MainActivity.this, "开发者", "https://github.com/shenzhengyang/TIPS"));
         } else if (id == R.id.Team) {
 
         }
@@ -171,6 +187,10 @@ public class MainActivity extends AppCompatActivity
         switch (id){
             case R.id.search:{
                 startActivity(SearchActivity.createIntent(MainActivity.this));
+                break;
+            }
+            case R.id.imageView:{
+                startActivity(UserActivity.CreateIntent(MainActivity.this));
                 break;
             }
         }
@@ -199,5 +219,52 @@ public class MainActivity extends AppCompatActivity
             }
             return true;
         }
+    }
+    /**打开新的Activity，向左滑入效果
+     * @param intent
+     */
+    public void toActivity(Intent intent) {
+        toActivity(intent, true);
+    }
+    /**打开新的Activity
+     * @param intent
+     * @param showAnimation
+     */
+    public void toActivity(Intent intent, boolean showAnimation) {
+        toActivity(intent, -1, showAnimation);
+    }
+    /**打开新的Activity，向左滑入效果
+     * @param intent
+     * @param requestCode
+     */
+    public void toActivity(Intent intent, int requestCode) {
+        toActivity(intent, requestCode, true);
+    }
+    /**打开新的Activity
+     * @param intent
+     * @param requestCode
+     * @param showAnimation
+     */
+    public void toActivity(final Intent intent, final int requestCode, final boolean showAnimation) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (intent == null) {
+                    Log.w("TAG", "toActivity  intent == null >> return;");
+                    return;
+                }
+                //fragment中使用context.startActivity会导致在fragment中不能正常接收onActivityResult
+                if (requestCode < 0) {
+                    startActivity(intent);
+                } else {
+                    startActivityForResult(intent, requestCode);
+                }
+                if (showAnimation) {
+                    overridePendingTransition(zuo.biao.library.R.anim.right_push_in, zuo.biao.library.R.anim.hold);
+                } else {
+                    overridePendingTransition(zuo.biao.library.R.anim.null_anim, zuo.biao.library.R.anim.null_anim);
+                }
+            }
+        });
     }
 }

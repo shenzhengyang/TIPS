@@ -10,10 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.tips.zy.tips.AddPeople.Activity.PeopleInfoAllActivity;
 import com.tips.zy.tips.Main.Entity.People;
 import com.tips.zy.tips.Main.View.ItemMenuView;
 import com.tips.zy.tips.R;
-import com.tips.zy.tips.test.DemoActivity;
 
 import java.util.List;
 
@@ -123,6 +123,7 @@ public class ItemMenuAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "单击了 "+position, Toast.LENGTH_SHORT).show();
+                context.startActivity(PeopleInfoAllActivity.CreateIntent(context));
             }
         });
 

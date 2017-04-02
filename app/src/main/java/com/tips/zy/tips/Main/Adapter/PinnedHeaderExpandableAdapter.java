@@ -1,6 +1,7 @@
 package com.tips.zy.tips.Main.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tips.zy.tips.AddPeople.Activity.PeopleInfoAllActivity;
 import com.tips.zy.tips.Main.View.PinnedHeaderExpandableListView;
 import com.tips.zy.tips.R;
 import com.tips.zy.tips.Main.View.ItemMenuView;
@@ -64,6 +66,9 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(context, "单击了 item", Toast.LENGTH_SHORT).show();
+				Intent intent=PeopleInfoAllActivity.CreateIntent(context);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				context.startActivity(intent);
 			}
 		});
 
@@ -123,10 +128,10 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
         ImageView iv = (ImageView)view.findViewById(R.id.groupIcon);
 		
 		if (isExpanded) {
-			iv.setImageResource(R.mipmap.btn_browser2);
+			iv.setImageResource(R.mipmap.jiantou_xiala_xia);
 		}
 		else{
-			iv.setImageResource(R.mipmap.btn_browser);
+			iv.setImageResource(R.mipmap.jiantou_you);
 		}
         
         TextView text = (TextView)view.findViewById(R.id.groupto);

@@ -12,5 +12,6 @@
         android:text="关于" />
 
     <TextView
+        android:text="保存"
         style="@style/topbar_right_btn" />
 </RelativeLayout>

@@ -23,18 +23,18 @@ public class AddPeopleHelper extends SQLiteOpenHelper{
     private static final String TAG="AddPeopleHelper";
     private static final int TABLE_VERSION=1;
     public static final String TABLE_NAME = "PeopleInfo";
-    private static final String P_Id="P_Id";
-    private static final String P_Icon="P_Icon";
-    private static final String P_Name="P_Name";
-    private static final String P_Gender="P_Gender";
-    private static final String P_Phone="P_Phone";
-    private static final String P_Mail="P_Mail";
-    private static final String P_Address="P_Address";
-    private static final String P_National="P_National";
-    private static final String P_Religion="P_Religion";
-    private static final String P_Degree="P_Degree";
-    private static final String P_BirthDay="P_BirthDay";
-    private static final String P_Remark="P_Remark";
+    public static final String P_Id="P_Id";
+    public static final String P_Icon="P_Icon";
+    public static final String P_Name="P_Name";
+    public static final String P_Gender="P_Gender";
+    public static final String P_Phone="P_Phone";
+    public static final String P_Mail="P_Mail";
+    public static final String P_Address="P_Address";
+    public static final String P_National="P_National";
+    public static final String P_Religion="P_Religion";
+    public static final String P_Degree="P_Degree";
+    public static final String P_BirthDay="P_BirthDay";
+    public static final String P_Remark="P_Remark";
 
     public AddPeopleHelper(Context context){
         super(context, TABLE_NAME, null, TABLE_VERSION);
@@ -122,7 +122,7 @@ public class AddPeopleHelper extends SQLiteOpenHelper{
      */
     public void put(int id,PeopleInfo peopleInfo){
         ContentValues values=new ContentValues();
-        values.put(P_Id,peopleInfo.getP_Id());
+        //values.put(P_Id,peopleInfo.getP_Id());
         values.put(P_Icon,peopleInfo.getP_Icon());
         values.put(P_Name,peopleInfo.getP_Name());
         values.put(P_Gender,peopleInfo.getP_Gender());

@@ -3,20 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal" 
-    android:background="#B8E6FA"
+    android:background="@color/AppBackgroud"
     android:gravity="center_vertical">
     <ImageView 
         android:id="@+id/groupIcon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:contentDescription="@null"
         android:layout_marginLeft="10dp"
-        android:src="@mipmap/btn_browser2"/>
+        android:src="@mipmap/jiantou_you"/>
     <TextView
         android:id="@+id/groupto"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="#000000"
+        android:textColor="@color/black_slight"
         android:textSize="18sp" 
         android:gravity="center_vertical|left"/>
 
