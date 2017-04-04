@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page">
+    <LinearLayout
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="公司"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:textColor="@color/black_slight"
+            android:textSize="16dp"
+            android:background="@color/AppBackgroud"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/gray_Line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="职位"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/jiantou"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/gray_Line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:id="@+id/company_address"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="地址"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/company_addressText"
+            android:padding="10dp"
+            android:gravity="right"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/jiantou"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/gray_Line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:textColor="@color/black_slight"
+            android:textSize="16dp"
+            android:background="@color/AppBackgroud"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -6,12 +6,14 @@
         style="@style/topbar_return_img" />
 
     <TextView
+        android:id="@+id/titlename"
         android:textColor="#FFFFFF"
         style="@style/topbar_title"
         android:layout_centerHorizontal="true"
         android:text="关于" />
 
     <TextView
+        android:id="@+id/titleright"
         android:text="保存"
         style="@style/topbar_right_btn" />
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.TextView;
 
 import com.tips.zy.tips.AddPeople.Adapter.AddPeopleAdapter;
 import com.tips.zy.tips.AddPeople.Entity.PeopleHobby;
@@ -29,7 +30,8 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
     LocalActivityManager activityManager;
     TabLayout tabLayout=null;
     ViewPager viewpager=null;
-
+    private TextView title_name;
+    private TextView title_right;
     /**启动这个Activity的Intent
      * @param context
      * @return
@@ -43,6 +45,9 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addpeoplemain);
+        initView();
+        initData();
+        initEvent();
         activityManager=new LocalActivityManager(this,true);
         activityManager.dispatchCreate(savedInstanceState);
         tabLayout= (TabLayout) findViewById(R.id.tablayout);
@@ -85,7 +90,10 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public void initView() {
-
+        title_name= (TextView) findViewById(R.id.titlename);
+        title_name.setText("添加档案");
+        title_right= (TextView) findViewById(R.id.titleright);
+        title_right.setText("");
     }
 
     @Override

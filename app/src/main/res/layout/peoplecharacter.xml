@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/black_slight"
+        android:text="性格"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="外向"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="内向"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="理性"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="感性"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="幽默"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="严肃"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="果断"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="严谨"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="灵活"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="稳重"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <!--性格-->
+    <!--备注-->
+    <LinearLayout
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:focusable="false"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black_slight"
+            android:textSize="16dp"
+            android:background="@color/AppBackgroud"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--备注-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

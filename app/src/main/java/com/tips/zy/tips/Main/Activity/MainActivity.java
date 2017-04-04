@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.tips.zy.tips.AddPeople.Activity.AddPeopleActivity;
+import com.tips.zy.tips.Const.Const;
 import com.tips.zy.tips.Login.Activity.UserActivity;
 import com.tips.zy.tips.Main.Adapter.PinnedHeaderExpandableAdapter;
 import com.tips.zy.tips.Main.View.PinnedHeaderExpandableListView;
@@ -163,18 +164,18 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.BusinessCard) {
             startActivity(ScanActivity.createIntent(MainActivity.this));
         } else if (id == R.id.Share) {
-            CommonUtil.shareInfo(MainActivity.this, getString(R.string.share_app) + "\n 点击链接直接查看ZBLibrary\n" + "占时无下载地址");
+            CommonUtil.shareInfo(MainActivity.this, getString(R.string.share_app) + "\n 点击链接直接查看TIPS\n" + Const.DOWNLOADAPP);
 
         } else if (id == R.id.Back) {
             startActivity(BackActivity.CreateIntent(MainActivity.this));
         } else if (id == R.id.Upload) {
             Toast.makeText(MainActivity.this,"云端接口占时未开放",Toast.LENGTH_LONG).show();
         }else if (id == R.id.AboutUs) {
-
+            toActivity(WebViewActivity.createIntent(MainActivity.this, "开发者",Const.PRODUCTION));
         }else if (id == R.id.UpdateLog) {
-            toActivity(WebViewActivity.createIntent(MainActivity.this, "开发者", "https://github.com/shenzhengyang/TIPS"));
+            toActivity(WebViewActivity.createIntent(MainActivity.this, "开发者", Const.GitHUB_CODE));
         } else if (id == R.id.Team) {
-
+            toActivity(WebViewActivity.createIntent(MainActivity.this, "开发者", Const.TEAM));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

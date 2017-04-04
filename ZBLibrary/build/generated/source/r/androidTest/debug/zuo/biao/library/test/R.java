@@ -476,11 +476,21 @@ public final class R {
         public static final int ActivityDialog=0x7f0a0000;
         public static final int ActivityRecDialog=0x7f0a0001;
         public static final int AlphaWindowNoTrancelation=0x7f0a0002;
+        /** 
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+         */
         public static final int AppBaseTheme=0x7f0a0003;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f0a0004;
         public static final int MyDialog=0x7f0a0005;
         public static final int Window=0x7f0a0006;
         public static final int WindowCompleteAlpha=0x7f0a0007;
+        /**  状态栏沉浸 >>>>>>>>>>>>>>>>> 
+         */
         public static final int activity_page=0x7f0a0008;
         public static final int blank=0x7f0a0009;
         public static final int blank_big=0x7f0a000a;

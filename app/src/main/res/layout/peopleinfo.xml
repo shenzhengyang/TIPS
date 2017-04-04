@@ -3,8 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="-20dp"
-    style="@style/activity_page">
+    android:layout_marginTop="-20dp">
     <ScrollView
         android:layout_margin="20dp"
         android:layout_width="match_parent"
@@ -130,6 +129,7 @@
             <!--邮件-->
             <!--生日-->
             <LinearLayout
+                android:id="@+id/birth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
@@ -141,10 +141,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/birth_Text"
                     android:layout_weight="1"
                     android:padding="6dp"
                     android:textSize="16dp"
-                    android:gravity="left"
+                    android:gravity="right"
                     android:text="请选择生日"
                     android:textColor="@color/gray_1"
                     android:layout_width="wrap_content"
@@ -158,6 +159,7 @@
             <!--生日-->
             <!--地址-->
             <LinearLayout
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
@@ -169,10 +171,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/address_Text"
                     android:layout_weight="1"
                     android:padding="6dp"
                     android:textSize="16dp"
-                    android:gravity="left"
+                    android:gravity="right"
                     android:text="请选择住址"
                     android:textColor="@color/gray_1"
                     android:layout_width="wrap_content"
@@ -316,6 +319,7 @@
             <!--信仰-->
             <!--学历-->
             <LinearLayout
+                android:id="@+id/degree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
@@ -327,10 +331,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/degree_Text"
                     android:layout_weight="1"
                     android:padding="6dp"
                     android:textSize="16dp"
-                    android:gravity="left"
+                    android:gravity="right"
                     android:text="请选择学历"
                     android:textColor="@color/gray_1"
                     android:layout_width="wrap_content"

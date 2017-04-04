@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/black_slight"
+        android:text="兴趣领域"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="科技"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="金融"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="哲学"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="管理"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="计算机"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="历史"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="文学"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--运动-->
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/black_slight"
+        android:text="运动"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="高尔夫"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="足球"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="哲学"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="篮球"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="跑步"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="游泳"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="保龄球"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--运动-->
+    <TextView
+        android:background="@color/gray_Line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <!--讨厌-->
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/black_slight"
+        android:text="讨厌"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="熬夜"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="早起"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="恐高"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="数字4"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="烟味"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="猫"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="狗"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_marginStart="10dp"
+            android:background="@drawable/radiobutton_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="@color/radiobutton_textcolor"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--讨厌-->
+    <!--备注-->
+    <LinearLayout
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black_slight"
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:textColor="@color/black_slight"
+            android:textSize="16dp"
+            android:background="@color/AppBackgroud"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--备注-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

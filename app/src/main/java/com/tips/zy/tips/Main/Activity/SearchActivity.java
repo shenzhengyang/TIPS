@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.Toolbar;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.tips.zy.tips.Main.Adapter.ItemMenuAdapter;
 import com.tips.zy.tips.Main.Entity.People;
@@ -30,7 +31,6 @@ public class SearchActivity extends BaseActivity {
     private ItemMenuAdapter itemMenuAdapter;
     private MenuListView menuListView;
     private List<People> peoples;
-
 
 
     @Override

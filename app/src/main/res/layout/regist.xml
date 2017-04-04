@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    style="@style/activity_page"
     tools:context="com.tips.zy.tips.Login.Activity.LoginActivity">
 
     <!-- Login progress -->

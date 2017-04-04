@@ -12,6 +12,7 @@ import com.tips.zy.tips.Login.View.PullScrollView;
 import com.tips.zy.tips.R;
 
 import zuo.biao.library.base.BaseActivity;
+import zuo.biao.library.manager.SystemBarTintManager;
 
 
 /**
@@ -26,6 +27,7 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
 
     private TableLayout mMainLayout;
 
+
     @Override
     public Activity getActivity() {
         return this;
@@ -38,6 +40,7 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.peopleinfoall);
 
         initView();
@@ -52,6 +55,8 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
 
         mScrollView.setHeader(mHeadImg);
         mScrollView.setOnTurnListener(this);
+
+
     }
 
     @Override

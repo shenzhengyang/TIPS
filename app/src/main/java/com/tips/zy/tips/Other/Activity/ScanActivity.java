@@ -22,6 +22,7 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 import com.tips.zy.tips.R;
 import com.zxing.activity.CaptureActivity;
@@ -38,6 +39,8 @@ import zuo.biao.library.util.CommonUtil;
  */
 public class ScanActivity extends CaptureActivity implements Callback, ActivityPresenter, OnClickListener {
 	public static final String TAG = "ScanActivity";
+	private TextView title_name;
+	private TextView title_right;
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -76,7 +79,10 @@ public class ScanActivity extends CaptureActivity implements Callback, ActivityP
 
 	@Override
 	public void initView() {//必须调用
-
+		title_name= (TextView) findViewById(R.id.titlename);
+		title_name.setText("扫描名片");
+		title_right= (TextView) findViewById(R.id.titleright);
+		title_right.setText("");
 	}
 
 
