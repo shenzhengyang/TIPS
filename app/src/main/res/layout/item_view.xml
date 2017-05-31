@@ -31,6 +31,7 @@
         android:padding="6dp"
         android:gravity="center">
         <ImageView
+            android:id="@+id/P_Icon"
             android:background="@drawable/search_icon"
             android:layout_marginRight="10dp"
             android:layout_width="36dp"
@@ -42,13 +43,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-
+                android:id="@+id/P_Name"
                 android:textColor="@color/gray_bold"
                 android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="姓名"/>
             <TextView
+                android:textColor="@color/gray_bold"
+                android:id="@+id/P_Hobby"
                 android:textSize="14dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

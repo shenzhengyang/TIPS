@@ -33,13 +33,33 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleCharacterHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleHobbyHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoAllHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleWorkHelper;
+import com.tips.zy.tips.AddPeople.Entity.PeopleCharacter;
+import com.tips.zy.tips.AddPeople.Entity.PeopleHobby;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfoAll;
+import com.tips.zy.tips.AddPeople.Entity.PeopleWork;
+import com.tips.zy.tips.Application.MyApplication;
+import com.tips.zy.tips.Login.DBHelper.UserHelper;
+import com.tips.zy.tips.Login.Enity.User;
 import com.tips.zy.tips.Main.Activity.MainActivity;
+import com.tips.zy.tips.Main.Entity.Group;
+import com.tips.zy.tips.Main.Entity.People;
+import com.tips.zy.tips.Main.Entity.PeopleAll;
+import com.tips.zy.tips.Main.Entity.PeopleGroupAll;
 import com.tips.zy.tips.R;
 
 import zuo.biao.library.base.BaseActivity;
+import zuo.biao.library.util.Log;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import static com.tips.zy.tips.R.layout.group;
 
 /**
  * A login screen that offers login via email/password.
@@ -100,7 +120,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             @Override
             public void onClick(View view) {
                 attemptLogin();
-                startActivity(new Intent(context,MainActivity.class));
+
             }
         });
 
@@ -185,11 +205,12 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
+        } /*else if (!isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
-        }
+        }*/
+
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -348,7 +369,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
      */
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    public class UserLoginTask extends AsyncTask<Void, Void, User> {
 
         private final String mEmail;
         private final String mPassword;
@@ -359,35 +380,48 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
 
         @Override
-        protected Boolean doInBackground(Void... params) {
+        protected User doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
 
             try {
                 // Simulate network access.
                 Thread.sleep(2000);
+                UserHelper userHelper=new UserHelper(context);
+                User user=userHelper.query(mEmail,mPassword);
+                Log.d("user",user.toString());
+                if(user.getU_name()!=null){
+                    queryAll();
+                    return user;
+                }
+                return null;
+
             } catch (InterruptedException e) {
-                return false;
+                return null;
             }
 
-            for (String credential : DUMMY_CREDENTIALS) {
+            /*for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
                 if (pieces[0].equals(mEmail)) {
                     // Account exists, return true if the password matches.
                     return pieces[1].equals(mPassword);
                 }
-            }
+            }*/
 
-            // TODO: register the new account here.
-            return true;
+           /* // TODO: register the new account here.
+            return null;*/
         }
 
         @Override
-        protected void onPostExecute(final Boolean success) {
+        protected void onPostExecute(final User user) {
             mAuthTask = null;
             showProgress(false);
 
-            if (success) {
+            if (user!=null) {
+                //将User 放进全局变量
+                getMyApplication().setUser(user);
+                startActivity(new Intent(context,MainActivity.class));
                 finish();
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
@@ -400,5 +434,128 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             showProgress(false);
         }
     }
+    public MyApplication getMyApplication(){
+        return (MyApplication) getApplicationContext();
+    }
+    public void queryAll(){
+        int icons[]=new int[]{R.mipmap.icon1,R.mipmap.icon2,
+                R.mipmap.icon3,R.mipmap.icon4,
+                R.mipmap.icon5,R.mipmap.icon6,
+                R.mipmap.icon7,R.mipmap.icon8,R.mipmap.icon9};
+        PeopleInfoAllHelper peopleInfoAllHelper=new PeopleInfoAllHelper(context);
+        List<String>G_Names=peopleInfoAllHelper.queryG_Name();
+        Log.d("G_Names",G_Names.toString());
+        List<PeopleGroupAll> peopleGroupAlls=new ArrayList<>();
+
+        //生成Groups
+        List<Group>groups=new ArrayList<>();
+
+        for(int j=0;j<G_Names.size();j++){
+            PeopleGroupAll peopleGroupAll=new PeopleGroupAll();
+            peopleGroupAll.setGroup(G_Names.get(j));
+            List<PeopleAll>peopleAlls=new ArrayList<>();
+            List<PeopleInfoAll>peopleInfoAlls =peopleInfoAllHelper.queryByG_Name(G_Names.get(j));
+            //Group
+            Group group=new Group();
+            group.setGroupName(G_Names.get(j));
+            List<People> peoples=new ArrayList<>();
+            for (int i= 0; i  < peopleInfoAlls.size(); i++) {
+
+                    PeopleAll peopleAll = new PeopleAll();
+                    People people=new People();
+                    people.setIcon(icons[new Random().nextInt(1)]);
+                    Log.d("查询peopleInfoAll", peopleInfoAlls.get(i).toString());
+                    //查询peopleInfo
+                    int P_Id = peopleInfoAlls.get(i).getP_Id();
+                    PeopleInfoHelper peopleInfoHelper = new PeopleInfoHelper(context);
+                    PeopleInfo peopleInfo = peopleInfoHelper.queryById(P_Id);
+                    Log.d("查询查询peopleInfo", peopleInfo.toString());
+                    peopleAll.setPeopleInfo(peopleInfo);
+                    people.setP_Id(peopleInfo.getP_Id());
+                    people.setP_Name(peopleInfo.getP_Name());
+                    //查询peopleWork
+                    int W_Id = peopleInfoAlls.get(i).getW_Id();
+                    PeopleWorkHelper peopleWorkHelper = new PeopleWorkHelper(context);
+                    PeopleWork peopleWork = peopleWorkHelper.queryById(W_Id);
+                    Log.d("查询peopleWork", peopleWork.toString());
+                    peopleAll.setPeopleWork(peopleWork);
+                    //查询PeopleHobby
+                    int H_Id = peopleInfoAlls.get(i).getH_Id();
+                    PeopleHobbyHelper peopleHobbyHelper = new PeopleHobbyHelper(context);
+                    PeopleHobby peopleHobby = peopleHobbyHelper.queryById(H_Id);
+                    Log.d("查询PeopleHobby", peopleHobby.toString());
+                    peopleAll.setPeopleHobby(peopleHobby);
+                    people.setP_Hobby(peopleHobby.getH_field()+peopleHobby.getH_Sport());
+                    //查询PeopleCharactor
+                    int C_Id = peopleInfoAlls.get(i).getC_Id();
+                    PeopleCharacterHelper peopleCharacterHelper = new PeopleCharacterHelper(context);
+                    PeopleCharacter peopleCharacter = peopleCharacterHelper.queryById(C_Id);
+                    Log.d("查询peopleCharacters", peopleCharacter.toString());
+                    peopleAll.setPeopleCharacter(peopleCharacter);
+
+                    peopleAlls.add(peopleAll);
+                    peoples.add(people);
+            }
+            peopleGroupAll.setPeopleAlls(peopleAlls);
+            peopleGroupAlls.add(peopleGroupAll);
+            Log.d("peopleGroupAlls",peopleGroupAlls.toString());
+            getMyApplication().setPeopleGroupAlls(peopleGroupAlls);
+            //添加Group
+            group.setPeoples(peoples);
+            groups.add(group);
+            getMyApplication().setGroups(groups);
+
+        }
+    }
+    /*public void addPeopleAll(){
+        List<PeopleGroupAll> peopleGroupAlls=getMyApplication().getPeopleGroupAlls();
+
+        //查询peopleInfoAll
+        PeopleInfoAllHelper peopleInfoAllHelper=new PeopleInfoAllHelper(context);
+        List<PeopleInfoAll> peopleInfoAlls=peopleInfoAllHelper.query();
+        for(int j=0;j<peopleInfoAlls.size();j++){
+            PeopleGroupAll peopleGroupAll = new PeopleGroupAll();
+            peopleGroupAll.setGroup(peopleInfoAlls.get(j).getG_Name());
+            List<PeopleAll> peopleAlls=new ArrayList<>();
+
+            for (int i = 0; i < peopleInfoAlls.size(); i++) {
+                if (peopleGroupAll.getGroup().equals(peopleInfoAlls.get(i).getG_Name())) {
+                    PeopleAll peopleAll = new PeopleAll();
+                    Log.d("查询peopleInfoAll", peopleInfoAlls.get(i).toString());
+                    //查询peopleInfo
+                    int P_Id = peopleInfoAlls.get(i).getP_Id();
+                    PeopleInfoHelper peopleInfoHelper = new PeopleInfoHelper(context);
+                    PeopleInfo peopleInfo = peopleInfoHelper.queryById(P_Id);
+                    Log.d("查询查询peopleInfo", peopleInfo.toString());
+                    peopleAll.setPeopleInfo(peopleInfo);
+                    //查询peopleWork
+                    int W_Id = peopleInfoAlls.get(i).getW_Id();
+                    PeopleWorkHelper peopleWorkHelper = new PeopleWorkHelper(context);
+                    PeopleWork peopleWork = peopleWorkHelper.queryById(W_Id);
+                    Log.d("查询peopleWork", peopleWork.toString());
+                    peopleAll.setPeopleWork(peopleWork);
+                    //查询PeopleHobby
+                    int H_Id = peopleInfoAlls.get(i).getH_Id();
+                    PeopleHobbyHelper peopleHobbyHelper = new PeopleHobbyHelper(context);
+                    PeopleHobby peopleHobby = peopleHobbyHelper.queryById(H_Id);
+                    Log.d("查询PeopleHobby", peopleHobby.toString());
+                    peopleAll.setPeopleHobby(peopleHobby);
+                    //查询PeopleCharactor
+                    int C_Id = peopleInfoAlls.get(i).getC_Id();
+                    PeopleCharacterHelper peopleCharacterHelper = new PeopleCharacterHelper(context);
+                    PeopleCharacter peopleCharacter = peopleCharacterHelper.queryById(C_Id);
+                    Log.d("查询peopleCharacters", peopleCharacter.toString());
+                    peopleAll.setPeopleCharacter(peopleCharacter);
+                    peopleAlls.add(peopleAll);
+                    peopleGroupAll.setPeopleAlls(peopleAlls);
+                }else{
+                    j=i;
+                    peopleGroupAlls.add(peopleGroupAll);
+                    break;
+                }
+
+            }
+        }
+    }*/
 }
 

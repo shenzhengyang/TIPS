@@ -16,24 +16,30 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tips.zy.tips.AddPeople.Activity.PeopleInfoAllActivity;
+import com.tips.zy.tips.Main.Entity.Group;
 import com.tips.zy.tips.Main.View.PinnedHeaderExpandableListView;
 import com.tips.zy.tips.R;
 import com.tips.zy.tips.Main.View.ItemMenuView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.view.FrameMetrics.ANIMATION_DURATION;
 
 
 public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter implements PinnedHeaderExpandableListView.HeaderAdapter {
-	private String[][] childrenData;
-	private String[] groupData;
+	/*private String[][] childrenData;
+	private String[] groupData;*/
+	private List<Group> groups=new ArrayList<>();
 	private Context context;
 	private PinnedHeaderExpandableListView listView;
 	private LayoutInflater inflater;
 	
-	public PinnedHeaderExpandableAdapter(String[][] childrenData,String[] groupData
+	public PinnedHeaderExpandableAdapter(List<Group> groups
 			,Context context,PinnedHeaderExpandableListView listView){
-		this.groupData = groupData; 
-		this.childrenData = childrenData;
+		/*this.groupData = groupData;
+		this.childrenData = childrenData;*/
+		this.groups=groups;
 		this.context = context;
 		this.listView = listView;
 		inflater = LayoutInflater.from(this.context);
@@ -41,7 +47,7 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
-		return childrenData[groupPosition][childPosition];
+		return groups.get(groupPosition).getPeoples().get(childPosition);
 	}
 
 	@Override
@@ -50,8 +56,8 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 	}
 
 	@Override
-	public View getChildView(int groupPosition, int childPosition,
-			boolean isLastChild, View convertView, ViewGroup parent) {
+	public View getChildView(final int groupPosition, final int childPosition,
+							 boolean isLastChild, View convertView, ViewGroup parent) {
 		View view = null;  
         if (convertView != null) {  
             view = convertView;  
@@ -60,7 +66,7 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
         }
 		View delete = view.findViewById(R.id.delete);
 		LinearLayout item = (LinearLayout) view.findViewById(R.id.item);
-		Log.d("childData",childrenData[groupPosition][childPosition]);
+		Log.d("childData",groups.get(groupPosition).getPeoples().get(childPosition).getP_Id()+"");
 		//item.setText("childrenData[groupPosition][childPosition]");
 		item.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -68,6 +74,7 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 				Toast.makeText(context, "单击了 item", Toast.LENGTH_SHORT).show();
 				Intent intent=PeopleInfoAllActivity.CreateIntent(context);
 				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				intent.putExtra("P_Id",groups.get(groupPosition).getPeoples().get(childPosition).getP_Id());
 				context.startActivity(intent);
 			}
 		});
@@ -88,8 +95,14 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 				//deleteItem(groupPosition,childPosition,finalConvertView);
 			}
 		});
-		return view;
+		ImageView Icon= (ImageView) view.findViewById(R.id.P_Icon);
+		TextView Name= (TextView) view.findViewById(R.id.P_Name);
+		TextView Hobby= (TextView) view.findViewById(R.id.P_Hobby);
+		Icon.setImageResource(groups.get(groupPosition).getPeoples().get(childPosition).getIcon());
+		Name.setText(groups.get(groupPosition).getPeoples().get(childPosition).getP_Name());
+		Hobby.setText(groups.get(groupPosition).getPeoples().get(childPosition).getP_Hobby());
 
+		return view;
 //        TextView text = (TextView)view.findViewById(R.id.childto);
 //        text.setText(childrenData[groupPosition][childPosition]);
 //        return view;
@@ -97,17 +110,17 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		return childrenData[groupPosition].length;
+		return groups.get(groupPosition).getPeoples().size();
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
-		return groupData[groupPosition];
+		return groups.get(groupPosition).getGroupName();
 	}
 
 	@Override
 	public int getGroupCount() {
-		return groupData.length;
+		return groups.size();
 	}
 
 	@Override
@@ -135,7 +148,7 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 		}
         
         TextView text = (TextView)view.findViewById(R.id.groupto);
-        text.setText(groupData[groupPosition]);  
+        text.setText(groups.get(groupPosition).getGroupName());
         return view;  
 	}
 
@@ -173,7 +186,7 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 	@Override
 	public void configureHeader(View header, int groupPosition,
 			int childPosition, int alpha) {
-		String groupData =  this.groupData[groupPosition];
+		String groupData =  this.groups.get(groupPosition).getGroupName();
 		((TextView) header.findViewById(R.id.groupto)).setText(groupData);
 		
 	}

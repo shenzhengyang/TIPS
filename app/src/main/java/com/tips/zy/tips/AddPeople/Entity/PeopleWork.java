@@ -6,8 +6,8 @@ package com.tips.zy.tips.AddPeople.Entity;
 
 public class PeopleWork {
 
-    private int W_id;
-    private String W_company;
+    private int W_Id;
+    private String W_Company;
     private String W_Position;
     private String W_Address;
     private String W_Remark;
@@ -17,27 +17,27 @@ public class PeopleWork {
     }
 
     public PeopleWork(int w_id, String w_company, String w_Position, String w_Address, String w_Remark) {
-        W_id = w_id;
-        W_company = w_company;
+        W_Id = w_id;
+        W_Company = w_company;
         W_Position = w_Position;
         W_Address = w_Address;
         W_Remark = w_Remark;
     }
 
     public int getW_id() {
-        return W_id;
+        return W_Id;
     }
 
-    public void setW_id(int w_id) {
-        W_id = w_id;
+    public void setW_id(int w_Id) {
+        W_Id = w_Id;
     }
 
-    public String getW_company() {
-        return W_company;
+    public String getW_Company() {
+        return W_Company;
     }
 
-    public void setW_company(String w_company) {
-        W_company = w_company;
+    public void setW_Company(String w_Company) {
+        W_Company = w_Company;
     }
 
     public String getW_Position() {
@@ -66,12 +66,10 @@ public class PeopleWork {
 
     @Override
     public String toString() {
-        return "PeopleWork{" +
-                "W_id=" + W_id +
-                ", W_company='" + W_company + '\'' +
-                ", W_Position='" + W_Position + '\'' +
-                ", W_Address='" + W_Address + '\'' +
-                ", W_Remark='" + W_Remark + '\'' +
-                '}';
+        return
+                "公司：'" + W_Company + '\'' +
+                "职位：'" + W_Position + '\'' +
+                "住址：'" + W_Address + '\'' +
+                "备注：'" + W_Remark + '\'';
     }
 }

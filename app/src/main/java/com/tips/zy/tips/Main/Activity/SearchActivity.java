@@ -4,11 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
-import android.support.v7.widget.Toolbar;
 import android.widget.SearchView;
-import android.widget.TextView;
 
 import com.tips.zy.tips.Main.Adapter.ItemMenuAdapter;
 import com.tips.zy.tips.Main.Entity.People;
@@ -69,13 +66,53 @@ public class SearchActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        for(int i=0;i<10;i++){
-            People people=new People();
-            people.setIcon("R.mipmap.logo");
-            people.setP_Name("小花");
-            people.setP_Hobby("打球");
-            peoples.add(people);
-        }
+
+        People people=new People();
+        people.setIcon(R.mipmap.icon1);
+        people.setP_Name("王捷");
+        people.setP_Hobby("打球");
+        peoples.add(people);
+        People people2=new People();
+        people2.setIcon(R.mipmap.icon2);
+        people2.setP_Name("王小捷");
+        people2.setP_Hobby("跑步");
+        peoples.add(people2);
+        People people3=new People();
+        people3.setIcon(R.mipmap.icon3);
+        people3.setP_Name("王志捷");
+        people3.setP_Hobby("玩游戏");
+        peoples.add(people3);
+        People people4=new People();
+        people4.setIcon(R.mipmap.icon4);
+        people4.setP_Name("王明");
+        people4.setP_Hobby("游泳");
+        peoples.add(people4);
+        People people5=new People();
+        people5.setIcon(R.mipmap.icon5);
+        people5.setP_Name("王鹏");
+        people5.setP_Hobby("旅游");
+        peoples.add(people5);
+        People people6=new People();
+        people6.setIcon(R.mipmap.icon6);
+        people6.setP_Name("王同为");
+        people6.setP_Hobby("上网");
+        peoples.add(people6);
+        People people7=new People();
+        people7.setIcon(R.mipmap.icon7);
+        people7.setP_Name("王解开");
+        people7.setP_Hobby("下棋");
+        peoples.add(people7);
+        People people8=new People();
+        people8.setIcon(R.mipmap.icon8);
+        people8.setP_Name("王雷奇");
+        people8.setP_Hobby("玩游戏");
+        peoples.add(people8);
+        People people9=new People();
+        people9.setIcon(R.mipmap.icon9);
+        people9.setP_Name("王凯文");
+        people9.setP_Hobby("踢足球");
+        peoples.add(people9);
+
         Log.d("peopesize",String.valueOf(peoples.size()));
         itemMenuAdapter=new ItemMenuAdapter(context,peoples);
         menuListView.setAdapter(itemMenuAdapter);

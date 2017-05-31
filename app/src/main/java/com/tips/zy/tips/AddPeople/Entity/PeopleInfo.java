@@ -135,19 +135,17 @@ public class PeopleInfo {
 
     @Override
     public String toString() {
-        return "PeopleInfo{" +
-                "P_id=" + P_Id +
-                ", P_Icon='" + P_Icon + '\'' +
-                ", P_Name='" + P_Name + '\'' +
-                ", P_Gender='" + P_Gender + '\'' +
-                ", P_Phone='" + P_Phone + '\'' +
-                ", P_Mail='" + P_Mail + '\'' +
-                ", P_Address='" + P_Address + '\'' +
-                ", P_National='" + P_National + '\'' +
-                ", P_Religion='" + P_Religion + '\'' +
-                ", P_Degree='" + P_Degree + '\'' +
-                ", P_BirthDay='" + P_BirthDay + '\'' +
-                ", P_Remark='" + P_Remark + '\'' +
-                '}';
+        return
+
+                "姓名：'" + P_Name + '\'' +
+                "性别：'" + P_Gender + '\'' +
+                "电话：'" + P_Phone + '\'' +
+                "邮箱：'" + P_Mail + '\'' +
+                "地址：'" + P_Address + '\'' +
+                "民族：'" + P_National + '\'' +
+                "信仰：'" + P_Religion + '\'' +
+                "学历：'" + P_Degree + '\'' +
+                "生日：'" + P_BirthDay + '\'' +
+                "备注：'" + P_Remark + '\'';
     }
 }

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -29,7 +30,7 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
     ArrayList<Map<String,Object>> viewlist=new ArrayList<Map<String, Object>>();
     LocalActivityManager activityManager;
     TabLayout tabLayout=null;
-    ViewPager viewpager=null;
+    public static ViewPager viewpager=null;
     private TextView title_name;
     private TextView title_right;
     /**启动这个Activity的Intent
@@ -150,6 +151,36 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
     private void loadActivity(int position) {
         Activity activity = activityManager.getActivity((String) viewlist.get(position).get("title"));
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // 获取当前活动的Activity实例
+        Log.d("parents_ActivityResult",activityManager.getCurrentId());
+        Activity subActivity=activityManager.getCurrentActivity();
+        if(requestCode<35){
+            subActivity=activityManager.getActivity("基本信息");
+        }else if(requestCode>35&&requestCode<40){
+            subActivity=activityManager.getActivity("工作");
+        }else if(requestCode>40&&requestCode<45){
+            subActivity=activityManager.getActivity("爱好");
+        }else{
+            subActivity=activityManager.getActivity("性格");
+        }
+
+        //判断是否实现返回值接口
+        Log.d("subActivity",subActivity.toString());
+        if (subActivity instanceof OnTabActivityResultListener) {
+            //获取返回值接口实例
+            OnTabActivityResultListener listener = (OnTabActivityResultListener) subActivity;
+            //转发请求到子Activity
+            listener.onTabActivityResult(requestCode, resultCode, data);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    public  void setCurrentPage(int page_postion){
+        viewpager.setCurrentItem(page_postion);
     }
 
 }

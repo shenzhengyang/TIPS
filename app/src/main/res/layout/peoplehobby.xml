@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     >
     <ScrollView
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/field_check1"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -36,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check2"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -46,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check3"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -56,6 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check4"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -72,6 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/field_check5"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -82,6 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check6"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -92,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check7"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -102,6 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/field_check8"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -127,6 +136,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/sport_check1"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -137,6 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check2"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -147,16 +158,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check3"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
             android:gravity="center"
-            android:text="哲学"
+            android:text="羽毛球"
             android:textColor="@color/radiobutton_textcolor"
             android:padding="6dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check4"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -173,6 +186,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/sport_check5"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -183,6 +197,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check6"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -193,6 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check7"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -203,6 +219,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/sport_check8"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -233,6 +250,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/hate_check1"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -243,6 +261,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check2"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -253,6 +272,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check3"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -263,6 +283,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check4"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -279,6 +300,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <CheckBox
+            android:id="@+id/hate_check5"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -289,6 +311,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check6"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -299,6 +322,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check7"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -309,6 +333,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:id="@+id/hate_check8"
             android:layout_marginStart="10dp"
             android:background="@drawable/radiobutton_background"
             android:button="@null"
@@ -334,6 +359,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/mark_text"
             android:textColor="@color/black_slight"
             android:textSize="16dp"
             android:background="@color/AppBackgroud"
@@ -342,7 +368,15 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <!--备注-->
-
+    <Button
+        android:id="@+id/next"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="下一步"
+        android:textColor="@color/Wite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

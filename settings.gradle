@@ -1,1 +1,1 @@
-include ':app', ':QRCodeLibrary', ':ZBLibrary'
+include ':app', ':QRCodeLibrary', ':ZBLibrary', ':library'

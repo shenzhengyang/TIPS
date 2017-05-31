@@ -1,5 +1,6 @@
 package com.tips.zy.tips.Main.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,13 +19,33 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.tips.zy.tips.AddPeople.Activity.AddPeopleActivity;
+import com.tips.zy.tips.AddPeople.Activity.PeopleCharacterActivity;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleCharacterHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleHobbyHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoAllHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleWorkHelper;
+import com.tips.zy.tips.AddPeople.Entity.PeopleCharacter;
+import com.tips.zy.tips.AddPeople.Entity.PeopleHobby;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfoAll;
+import com.tips.zy.tips.AddPeople.Entity.PeopleWork;
+import com.tips.zy.tips.Application.MyApplication;
 import com.tips.zy.tips.Const.Const;
 import com.tips.zy.tips.Login.Activity.UserActivity;
 import com.tips.zy.tips.Main.Adapter.PinnedHeaderExpandableAdapter;
+import com.tips.zy.tips.Main.Entity.Group;
+import com.tips.zy.tips.Main.Entity.People;
+import com.tips.zy.tips.Main.Entity.PeopleAll;
+import com.tips.zy.tips.Main.Entity.PeopleGroupAll;
 import com.tips.zy.tips.Main.View.PinnedHeaderExpandableListView;
 import com.tips.zy.tips.Other.Activity.BackActivity;
 import com.tips.zy.tips.Other.Activity.ScanActivity;
 import com.tips.zy.tips.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import zuo.biao.library.ui.WebViewActivity;
 import zuo.biao.library.util.CommonUtil;
@@ -35,8 +56,9 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private PinnedHeaderExpandableListView explistview;
 
-    private String[][] childrenData = new String[10][10];
-    private String[] groupData = new String[10];
+    /*private String[][] childrenData = new String[10][10];
+    private String[] groupData = new String[10];*/
+    private List<Group> groups=new ArrayList<>();
     private int expandFlag = -1;//控制列表的展开
     private PinnedHeaderExpandableAdapter adapter;
 
@@ -52,7 +74,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         init();
         initData();
-
     }
 
 
@@ -90,23 +111,76 @@ public class MainActivity extends AppCompatActivity
         userImage.setOnClickListener(this);
     }
     private void initData() {
-        for(int i=0;i<10;i++){
-            groupData[i] = "分组"+i;
-        }
-
-        for(int i=0;i<10;i++){
-            for(int j=0;j<10;j++){
-                childrenData[i][j] = "好友"+i+"-"+j;
-            }
-        }
+        groups=getMyApplication().getGroups();
+        //Log.d("测试",groups.get(0).getPeoples().get(0).getP_Name()+"");
+        //groupData();
         //设置悬浮头部VIEW
         explistview.setHeaderView(getLayoutInflater().inflate(R.layout.group_head,
                 explistview, false));
-        adapter = new PinnedHeaderExpandableAdapter(childrenData, groupData, getApplicationContext(),explistview);
+        adapter = new PinnedHeaderExpandableAdapter(groups, getApplicationContext(),explistview);
         explistview.setAdapter(adapter);
 
         //设置单个分组展开
         explistview.setOnGroupClickListener(new GroupClickListener());
+
+    }
+
+    private void groupData() {
+
+        String fenzu[]={"朋友","同学","同事","老朋友","家人","领导","好友","兴趣相同"};
+        for(int i=0;i<fenzu.length;i++){
+            List<People> peoples=new ArrayList<>();
+            People people=new People();
+            people.setIcon(R.mipmap.icon1);
+            people.setP_Name("王捷");
+            people.setP_Hobby("打球");
+            peoples.add(people);
+            People people2=new People();
+            people2.setIcon(R.mipmap.icon2);
+            people2.setP_Name("王小捷");
+            people2.setP_Hobby("跑步");
+            peoples.add(people2);
+            People people3=new People();
+            people3.setIcon(R.mipmap.icon3);
+            people3.setP_Name("王志捷");
+            people3.setP_Hobby("玩游戏");
+            peoples.add(people3);
+            People people4=new People();
+            people4.setIcon(R.mipmap.icon4);
+            people4.setP_Name("王明");
+            people4.setP_Hobby("游泳");
+            peoples.add(people4);
+            People people5=new People();
+            people5.setIcon(R.mipmap.icon5);
+            people5.setP_Name("王鹏");
+            people5.setP_Hobby("旅游");
+            peoples.add(people5);
+            People people6=new People();
+            people6.setIcon(R.mipmap.icon6);
+            people6.setP_Name("王同为");
+            people6.setP_Hobby("上网");
+            peoples.add(people6);
+            People people7=new People();
+            people7.setIcon(R.mipmap.icon7);
+            people7.setP_Name("王解开");
+            people7.setP_Hobby("下棋");
+            peoples.add(people7);
+            People people8=new People();
+            people8.setIcon(R.mipmap.icon8);
+            people8.setP_Name("王雷奇");
+            people8.setP_Hobby("玩游戏");
+            peoples.add(people8);
+            People people9=new People();
+            people9.setIcon(R.mipmap.icon9);
+            people9.setP_Name("王凯文");
+            people9.setP_Hobby("踢足球");
+            peoples.add(people9);
+            Group group=new Group();
+            group.setGroupName(fenzu[i]);
+            group.setPeoples(peoples);
+            groups.add(group);
+            Log.d("groups",groups.toString());
+        }
 
     }
 
@@ -267,5 +341,104 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+    }
+    public MyApplication getMyApplication(){
+        return (MyApplication) getApplicationContext();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.d("onResume","更新数据-----------------------------------------");
+        final ProgressDialog dialog = ProgressDialog.show(this, null, "数据加载中，请稍候...", true, false);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                queryAll();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                    }
+                });
+            }
+        }).start();
+        super.onResume();
+
+    }
+    public void queryAll(){
+        int icons[]=new int[]{R.mipmap.icon1,R.mipmap.icon2,
+                R.mipmap.icon3,R.mipmap.icon4,
+                R.mipmap.icon5,R.mipmap.icon6,
+                R.mipmap.icon7,R.mipmap.icon8,R.mipmap.icon9};
+        PeopleInfoAllHelper peopleInfoAllHelper=new PeopleInfoAllHelper(MainActivity.this);
+        List<String>G_Names=peopleInfoAllHelper.queryG_Name();
+        Log.d("G_Names",G_Names.toString());
+        List<PeopleGroupAll> peopleGroupAlls=new ArrayList<>();
+
+        //生成Groups
+        List<Group>groups=new ArrayList<>();
+
+        for(int j=0;j<G_Names.size();j++){
+            PeopleGroupAll peopleGroupAll=new PeopleGroupAll();
+            peopleGroupAll.setGroup(G_Names.get(j));
+            List<PeopleAll>peopleAlls=new ArrayList<>();
+            List<PeopleInfoAll>peopleInfoAlls =peopleInfoAllHelper.queryByG_Name(G_Names.get(j));
+            //Group
+            Group group=new Group();
+            group.setGroupName(G_Names.get(j));
+            List<People> peoples=new ArrayList<>();
+            for (int i= 0; i  < peopleInfoAlls.size(); i++) {
+
+                PeopleAll peopleAll = new PeopleAll();
+                People people=new People();
+                Log.d("随机数",icons[new Random().nextInt(9)]+"");
+                people.setIcon(icons[new Random().nextInt(9)]);
+                Log.d("查询peopleInfoAll", peopleInfoAlls.get(i).toString());
+                //查询peopleInfo
+                int P_Id = peopleInfoAlls.get(i).getP_Id();
+                PeopleInfoHelper peopleInfoHelper = new PeopleInfoHelper(MainActivity.this);
+                PeopleInfo peopleInfo = peopleInfoHelper.queryById(P_Id);
+                Log.d("查询查询peopleInfo", peopleInfo.toString());
+                peopleAll.setPeopleInfo(peopleInfo);
+                Log.d("ID测试",peopleInfo.getP_Id()+"");
+                people.setP_Id(peopleInfo.getP_Id());
+                Log.d("ID测试",people.getP_Id()+"");
+                people.setP_Name(peopleInfo.getP_Name());
+                //查询peopleWork
+                int W_Id = peopleInfoAlls.get(i).getW_Id();
+                PeopleWorkHelper peopleWorkHelper = new PeopleWorkHelper(MainActivity.this);
+                PeopleWork peopleWork = peopleWorkHelper.queryById(W_Id);
+                Log.d("查询peopleWork", peopleWork.toString());
+                peopleAll.setPeopleWork(peopleWork);
+                //查询PeopleHobby
+                int H_Id = peopleInfoAlls.get(i).getH_Id();
+                PeopleHobbyHelper peopleHobbyHelper = new PeopleHobbyHelper(MainActivity.this);
+                PeopleHobby peopleHobby = peopleHobbyHelper.queryById(H_Id);
+                Log.d("查询PeopleHobby", peopleHobby.toString());
+                peopleAll.setPeopleHobby(peopleHobby);
+                people.setP_Hobby(peopleHobby.getH_field()+peopleHobby.getH_Sport()+"");
+                //查询PeopleCharactor
+                int C_Id = peopleInfoAlls.get(i).getC_Id();
+                PeopleCharacterHelper peopleCharacterHelper = new PeopleCharacterHelper(MainActivity.this);
+                PeopleCharacter peopleCharacter = peopleCharacterHelper.queryById(C_Id);
+                Log.d("查询peopleCharacters", peopleCharacter.toString());
+                peopleAll.setPeopleCharacter(peopleCharacter);
+                peopleAlls.add(peopleAll);
+                peoples.add(people);
+            }
+            peopleGroupAll.setPeopleAlls(peopleAlls);
+            peopleGroupAlls.add(peopleGroupAll);
+            Log.d("peopleGroupAlls",peopleGroupAlls.toString());
+            getMyApplication().setPeopleGroupAlls(peopleGroupAlls);
+            //添加Group
+            group.setPeoples(peoples);
+            groups.add(group);
+            getMyApplication().setGroups(groups);
+        }
     }
 }

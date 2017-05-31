@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tips.zy.tips.AddPeople.Activity.PeopleInfoAllActivity;
@@ -143,6 +145,12 @@ public class ItemMenuAdapter extends BaseAdapter {
                 deleteItem(position, finalConvertView);
             }
         });
+        ImageView Icon= (ImageView) convertView.findViewById(R.id.P_Icon);
+        TextView Name= (TextView) convertView.findViewById(R.id.P_Name);
+        TextView Hobby= (TextView) convertView.findViewById(R.id.P_Hobby);
+        Icon.setImageResource(peoples.get(position).getIcon());
+        Name.setText(peoples.get(position).getP_Name());
+        Hobby.setText(peoples.get(position).getP_Hobby());
         return convertView;
     };
 }

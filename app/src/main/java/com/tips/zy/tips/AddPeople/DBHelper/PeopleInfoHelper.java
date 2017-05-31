@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfoAll;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,8 @@ import zuo.biao.library.util.StringUtil;
  * Created by zy on 2017/3/31.
  */
 
-public class AddPeopleHelper extends SQLiteOpenHelper{
-    private static final String TAG="AddPeopleHelper";
+public class PeopleInfoHelper extends SQLiteOpenHelper{
+    private static final String TAG="PeopleInfoHelper";
     private static final int TABLE_VERSION=1;
     public static final String TABLE_NAME = "PeopleInfo";
     public static final String P_Id="P_Id";
@@ -36,14 +37,14 @@ public class AddPeopleHelper extends SQLiteOpenHelper{
     public static final String P_BirthDay="P_BirthDay";
     public static final String P_Remark="P_Remark";
 
-    public AddPeopleHelper(Context context){
+    public PeopleInfoHelper(Context context){
         super(context, TABLE_NAME, null, TABLE_VERSION);
     }
-    public AddPeopleHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public PeopleInfoHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
-    public AddPeopleHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
+    public PeopleInfoHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
         super(context, name, factory, version, errorHandler);
     }
 
@@ -277,4 +278,86 @@ public class AddPeopleHelper extends SQLiteOpenHelper{
     private String[] getSelectionArgs(String column, String value) {
         return StringUtil.isNotEmpty(column, false) ? new String[]{value} : null;
     }
+
+    public void addPeopleInfo(List<PeopleInfo> peopleInfos){
+        SQLiteDatabase db=this.getWritableDatabase();
+        //db.beginTransaction();
+        try{
+            for(PeopleInfo peopleInfo:peopleInfos){
+
+                db.execSQL("INSERT INTO "+TABLE_NAME +" VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        new Object[]{peopleInfo.getP_Icon(),peopleInfo.getP_Name(),
+                                peopleInfo.getP_Gender(),peopleInfo.getP_Phone(),
+                                peopleInfo.getP_Mail(),peopleInfo.getP_Address(),
+                                peopleInfo.getP_National(),peopleInfo.getP_Religion(),
+                                peopleInfo.getP_Degree(),peopleInfo.getP_BirthDay(),
+                                peopleInfo.getP_Remark()});
+            }
+            //db.setTransactionSuccessful();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    public List<PeopleInfo> query(){
+        ArrayList<PeopleInfo> peopleInfos=new ArrayList<PeopleInfo>();
+        Cursor curcor=queryAll();
+        while(curcor.moveToNext()){
+            PeopleInfo peopleInfo=new PeopleInfo();
+            peopleInfo.setP_Id(curcor.getInt(curcor.getColumnIndex(P_Id)));
+            peopleInfo.setP_Icon(curcor.getString(curcor.getColumnIndex(P_Icon)));
+            peopleInfo.setP_Name(curcor.getString(curcor.getColumnIndex(P_Name)));
+            peopleInfo.setP_Gender(curcor.getString(curcor.getColumnIndex(P_Gender)));
+            peopleInfo.setP_Phone(curcor.getString(curcor.getColumnIndex(P_Phone)));
+            peopleInfo.setP_Mail(curcor.getString(curcor.getColumnIndex(P_Mail)));
+            peopleInfo.setP_Address(curcor.getString(curcor.getColumnIndex(P_Address)));
+            peopleInfo.setP_National(curcor.getString(curcor.getColumnIndex(P_National)));
+            peopleInfo.setP_Religion(curcor.getString(curcor.getColumnIndex(P_Religion)));
+            peopleInfo.setP_Degree(curcor.getString(curcor.getColumnIndex(P_Degree)));
+            peopleInfo.setP_BirthDay(curcor.getString(curcor.getColumnIndex(P_BirthDay)));
+            peopleInfo.setP_Remark(curcor.getString(curcor.getColumnIndex(P_Remark)));
+
+            zuo.biao.library.util.Log.d("helperpeopleInfoAll",peopleInfo.toString());
+            peopleInfos.add(peopleInfo);
+        }
+        curcor.close();
+        return peopleInfos;
+    }
+    public int query_PID(){
+
+        Cursor curcor=queryAll();
+        if(curcor.getCount()==0){
+            return 0;
+        }
+        curcor.moveToLast();
+        return curcor.getInt(curcor.getColumnIndex(P_Id));
+    }
+    public PeopleInfo queryById(int id){
+        //ArrayList<PeopleInfo> peopleInfos=new ArrayList<PeopleInfo>();
+        PeopleInfo peopleInfo=new PeopleInfo();
+        Cursor curcor=queryAll();
+        while(curcor.moveToNext()){
+
+            if(curcor.getInt(curcor.getColumnIndex(P_Id))==id) {
+
+                peopleInfo.setP_Id(curcor.getInt(curcor.getColumnIndex(P_Id)));
+                peopleInfo.setP_Icon(curcor.getString(curcor.getColumnIndex(P_Icon)));
+                peopleInfo.setP_Name(curcor.getString(curcor.getColumnIndex(P_Name)));
+                peopleInfo.setP_Gender(curcor.getString(curcor.getColumnIndex(P_Gender)));
+                peopleInfo.setP_Phone(curcor.getString(curcor.getColumnIndex(P_Phone)));
+                peopleInfo.setP_Mail(curcor.getString(curcor.getColumnIndex(P_Mail)));
+                peopleInfo.setP_Address(curcor.getString(curcor.getColumnIndex(P_Address)));
+                peopleInfo.setP_National(curcor.getString(curcor.getColumnIndex(P_National)));
+                peopleInfo.setP_Religion(curcor.getString(curcor.getColumnIndex(P_Religion)));
+                peopleInfo.setP_Degree(curcor.getString(curcor.getColumnIndex(P_Degree)));
+                peopleInfo.setP_BirthDay(curcor.getString(curcor.getColumnIndex(P_BirthDay)));
+                peopleInfo.setP_Remark(curcor.getString(curcor.getColumnIndex(P_Remark)));
+
+                zuo.biao.library.util.Log.d("helperpeopleInfoAll", peopleInfo.toString());
+                //peopleInfos.add(peopleInfo);
+            }
+        }
+        curcor.close();
+        return peopleInfo;
+    }
+
 }

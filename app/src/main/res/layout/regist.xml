@@ -60,6 +60,7 @@
 
             </android.support.design.widget.TextInputLayout>
             <Button
+                android:id="@+id/getYanzhengma"
                 android:textColor="@color/Wite"
                 android:textSize="12dp"
                 android:background="@drawable/button_shape"
@@ -91,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <CheckBox
+                    android:id="@+id/check"
                     android:checked="true"
                     android:textSize="12dp"
                     android:textColor="@color/black_slight"
@@ -105,7 +107,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/regist_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

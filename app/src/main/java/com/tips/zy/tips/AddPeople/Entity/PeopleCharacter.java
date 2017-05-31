@@ -7,12 +7,12 @@ package com.tips.zy.tips.AddPeople.Entity;
 public class PeopleCharacter {
 
     private int C_Id;
-    private String C_character;
+    private String C_Character;
     private String C_Remark;
 
     public PeopleCharacter(int c_Id, String c_character, String c_Remark) {
         C_Id = c_Id;
-        C_character = c_character;
+        C_Character = c_character;
         C_Remark = c_Remark;
     }
     public PeopleCharacter(){
@@ -26,12 +26,12 @@ public class PeopleCharacter {
         C_Id = c_Id;
     }
 
-    public String getC_character() {
-        return C_character;
+    public String getC_Character() {
+        return C_Character;
     }
 
-    public void setC_character(String c_character) {
-        C_character = c_character;
+    public void setC_Character(String c_character) {
+        C_Character = c_character;
     }
 
     public String getC_Remark() {
@@ -44,10 +44,8 @@ public class PeopleCharacter {
 
     @Override
     public String toString() {
-        return "PeopleCharacter{" +
-                "C_Id=" + C_Id +
-                ", C_character='" + C_character + '\'' +
-                ", C_Remark='" + C_Remark + '\'' +
-                '}';
+        return
+                "性格：'" + C_Character + '\'' +
+                "备注：'" + C_Remark + '\'';
     }
 }

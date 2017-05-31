@@ -18,10 +18,12 @@
         android:contentDescription="@null"
         android:scaleType="fitXY">
         <ImageView
+            android:id="@+id/iP_Icon"
             android:src="@mipmap/touxiang"
             android:layout_width="80dp"
             android:layout_height="80dp" />
         <TextView
+            android:id="@+id/iP_Name"
             android:textSize="16dp"
             android:textColor="@color/Wite"
             android:gravity="center"
@@ -63,6 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+
                         android:layout_weight="1"
                         android:gravity="left"
                         android:textColor="@color/black_slight"
@@ -85,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/iP_Info"
                         android:gravity="center"
                         android:text="了解朋友的信息有助于更好地维护关系"
                         android:textSize="12dp"
@@ -129,6 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/iP_Work"
                     android:gravity="center"
                     android:text="了解朋友的信息有助于更好地维护关系"
                     android:textSize="12dp"
@@ -173,6 +178,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/iP_Hobby"
                         android:gravity="center"
                         android:text="了解朋友的信息有助于更好地维护关系"
                         android:textSize="12dp"
@@ -217,6 +223,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/iP_Charactor"
                         android:gravity="center"
                         android:text="了解朋友的信息有助于更好地维护关系"
                         android:textSize="12dp"

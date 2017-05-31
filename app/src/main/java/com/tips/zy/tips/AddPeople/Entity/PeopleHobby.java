@@ -65,12 +65,10 @@ public class PeopleHobby {
 
     @Override
     public String toString() {
-        return "PeopleHobby{" +
-                "H_Id=" + H_Id +
-                ", H_field='" + H_field + '\'' +
-                ", H_Sport='" + H_Sport + '\'' +
-                ", H_Hate='" + H_Hate + '\'' +
-                ", H_Remark='" + H_Remark + '\'' +
-                '}';
+        return
+                "所在领域：'" + H_field + '\'' +
+                "爱好的运动：" + H_Sport + '\'' +
+                "讨厌：'" + H_Hate + '\'' +
+                "备注：'" + H_Remark + '\'';
     }
 }

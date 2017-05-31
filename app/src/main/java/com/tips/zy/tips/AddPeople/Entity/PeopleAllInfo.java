@@ -5,6 +5,7 @@ package com.tips.zy.tips.AddPeople.Entity;
  */
 
 public class PeopleAllInfo {
+    String G_Name;
     private PeopleInfo peopleInfo;
     private PeopleWork peopleWork;
     private PeopleCharacter peopleCharacter;
@@ -16,6 +17,19 @@ public class PeopleAllInfo {
         this.peopleCharacter = peopleCharacter;
         this.peopleHobby = peopleHobby;
     }
+
+
+
+    public String getG_Name() {
+        return G_Name;
+    }
+
+    public void setG_Name(String g_Name) {
+        G_Name = g_Name;
+    }
+
+
+
     public PeopleAllInfo(){
         super();
     }
