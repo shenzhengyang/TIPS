@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">刷新</string>
     <string name="Search_Text">搜索</string>
     <string name="P_Name">姓名</string>
     <string name="man">男</string>

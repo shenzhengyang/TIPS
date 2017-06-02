@@ -1,16 +1,12 @@
 package com.tips.zy.tips.AddPeople.Activity;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -25,6 +21,7 @@ import com.tips.zy.tips.Application.MyApplication;
 import com.tips.zy.tips.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import zuo.biao.library.base.BaseActivity;
 import zuo.biao.library.ui.BottomMenuWindow;
@@ -41,7 +38,7 @@ import zuo.biao.library.util.TimeUtil;
  * Created by zy on 2017/4/2.
  */
 
-public class PeopleInfoActivity extends BaseActivity implements View.OnClickListener,OnTabActivityResultListener{
+public class PeopleInfoEdit2Activity extends BaseActivity implements View.OnClickListener,OnTabActivityResultListener{
     public static final String TAG="PeopleInfoActivity";
     //private Button button;
 //    private PeopleInfoHelper addPeopleHelper;
@@ -71,6 +68,8 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
     private LinearLayout address;
     private Button next;
 
+    private int info_id;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +85,7 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
         return this;
     }
     public static Intent CreateIntent(Context contxt){
-        return new Intent(contxt,PeopleInfoActivity.class);
+        return new Intent(contxt,PeopleInfoEdit2Activity.class);
     }
 
     @Override
@@ -113,7 +112,29 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void initData() {
-
+        Intent intent=getIntent();//getIntent将该项目中包含的原始intent检索出来，将检索出来的intent赋值给一个Intent类型的变量intent
+        Bundle bundle=intent.getExtras();//.getExtras()得到intent所附带的额外数据
+        final int P_Id=bundle.getInt("P_Id");//getString()返回指定key的值
+        Log.d("P_ID",P_Id+"");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
+                PeopleInfo peopleInfo=peopleInfoHelper.queryById(P_Id);
+                //P_Icon.setImageResource(R.mipmap.icon1);
+                info_id=P_Id;
+                picturePath=peopleInfo.getP_Icon();
+                ImageLoaderUtil.loadImage(P_Icon,peopleInfo.getP_Icon());
+                P_Name.setText(peopleInfo.getP_Name());
+                P_Phone.setText(peopleInfo.getP_Phone());
+                P_Mail.setText(peopleInfo.getP_Mail());
+                birth_Text.setText(peopleInfo.getP_BirthDay());
+                address_Text.setText(peopleInfo.getP_Address());
+                P_Nation.setText(peopleInfo.getP_National());
+                degree_Text.setText(peopleInfo.getP_Degree());
+                mark_text.setText(peopleInfo.getP_Remark());
+            }
+        }).start();
 
     }
 
@@ -193,7 +214,8 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
                     @Override
                     public void run() {
                         PeopleInfo peopleInfo=getMyApplication().getPeopleInfo();
-                        peopleInfo.setP_Icon(P_Icon_name);
+                        peopleInfo.setP_Id(info_id);
+                        peopleInfo.setP_Icon(picturePath);
                         peopleInfo.setP_Name(P_Name_name);
                         peopleInfo.setP_Gender(P_Gender_name);
                         peopleInfo.setP_Phone(P_Phone_name);
@@ -211,10 +233,16 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
                             }
                         });
                         Log.d("getPeopleInfo()",getMyApplication().getPeopleInfo().toString());
+                        //插入peopleInfo
+                        PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
+                        peopleInfo=getMyApplication().getPeopleInfo();
+
+                        peopleInfoHelper.updatePeopleInfo(peopleInfo);
+                        zuo.biao.library.util.Log.d("更新peopleInfo",peopleInfo.toString());
+                        finish();
                     }
                 });
-                AddPeopleActivity add= (AddPeopleActivity) getParent();
-                add.setCurrentPage(1);
+
                 break;
             }
             case R.id.birth:{

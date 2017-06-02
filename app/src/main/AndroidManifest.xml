@@ -21,7 +21,9 @@
         </activity>
         <activity
             android:name=".Main.Activity.SearchActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".AddPeople.Activity.AddPeopleActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -40,6 +42,27 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddPeople.Activity.PeopleCharacterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddPeople.Activity.PeopleInfoEditActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name=".AddPeople.Activity.PeopleInfoEdit2Activity"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name=".AddPeople.Activity.PeopleWorkEditActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name=".AddPeople.Activity.PeopleHobbyEditActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddPeople.Activity.PeopleCharacterEditActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddPeople.Activity.PeopleInfoAllActivity"

@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import android.widget.SearchView;
 
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoHelper;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
 import com.tips.zy.tips.Main.Adapter.ItemMenuAdapter;
 import com.tips.zy.tips.Main.Entity.People;
 import com.tips.zy.tips.Main.View.MenuListView;
@@ -67,7 +69,7 @@ public class SearchActivity extends BaseActivity {
     @Override
     public void initData() {
 
-        People people=new People();
+       /* People people=new People();
         people.setIcon(R.mipmap.icon1);
         people.setP_Name("王捷");
         people.setP_Hobby("打球");
@@ -111,7 +113,7 @@ public class SearchActivity extends BaseActivity {
         people9.setIcon(R.mipmap.icon9);
         people9.setP_Name("王凯文");
         people9.setP_Hobby("踢足球");
-        peoples.add(people9);
+        peoples.add(people9);*/
 
         Log.d("peopesize",String.valueOf(peoples.size()));
         itemMenuAdapter=new ItemMenuAdapter(context,peoples);
@@ -132,9 +134,20 @@ public class SearchActivity extends BaseActivity {
             public boolean onQueryTextChange(String newText) {
 
                 //过滤数据逻辑
-
-
-                return false;
+                Log.d("query_string",newText+"-----------");
+                PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
+                List<PeopleInfo>peopleInfos=peopleInfoHelper.queryByLike(newText);
+                peoples.clear();
+                Log.d("peoples",peopleInfos.toString());
+                for(int i=0;i<peopleInfos.size();i++){
+                    Log.d("peopleInfos_search",peopleInfos.toString());
+                    People people=new People();
+                    people.setP_Name(peopleInfos.get(i).getP_Name());
+                    people.setIcon(peopleInfos.get(i).getP_Icon());
+                    peoples.add(people);
+                }
+                itemMenuAdapter.notifyDataSetChanged();
+                return true;
             }
         });
     }

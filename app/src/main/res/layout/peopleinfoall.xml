@@ -74,6 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <ImageView
+                        android:id="@+id/Edit_info"
                         android:src="@mipmap/xiugai"
                         android:layout_width="16dp"
                         android:layout_height="16dp" />
@@ -119,6 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <ImageView
+                    android:id="@+id/Edit_work"
                     android:src="@mipmap/xiugai"
                     android:layout_width="16dp"
                     android:layout_height="16dp" />
@@ -164,6 +166,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <ImageView
+                        android:id="@+id/Edit_hobbys"
                         android:src="@mipmap/xiugai"
                         android:layout_width="16dp"
                         android:layout_height="16dp" />
@@ -209,6 +212,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <ImageView
+                        android:id="@+id/Edit_charactor"
                         android:src="@mipmap/xiugai"
                         android:layout_width="16dp"
                         android:layout_height="16dp" />

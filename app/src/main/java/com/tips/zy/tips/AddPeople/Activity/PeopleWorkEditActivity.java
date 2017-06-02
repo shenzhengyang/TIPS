@@ -6,23 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleInfoHelper;
+import com.tips.zy.tips.AddPeople.DBHelper.PeopleWorkHelper;
+import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
 import com.tips.zy.tips.AddPeople.Entity.PeopleWork;
 import com.tips.zy.tips.Application.MyApplication;
 import com.tips.zy.tips.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import zuo.biao.library.base.BaseActivity;
-import zuo.biao.library.manager.SystemBarTintManager;
 import zuo.biao.library.ui.BottomMenuWindow;
-import zuo.biao.library.ui.DatePickerWindow;
 import zuo.biao.library.ui.PlacePickerWindow;
 import zuo.biao.library.util.StringUtil;
 
@@ -30,7 +31,7 @@ import zuo.biao.library.util.StringUtil;
  * Created by zy on 2017/4/2.
  */
 
-public class PeopleWorkActivity extends BaseActivity implements View.OnClickListener,OnTabActivityResultListener{
+public class PeopleWorkEditActivity extends BaseActivity implements View.OnClickListener{
     public static final String TAG="PeopleWorkActivity";
     private Button next;
     private EditText company_text;
@@ -44,6 +45,8 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
     private String position_name;
     private String address_name;
     private String mark_name;
+
+    int work_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +63,7 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
 
 
     public static Intent CreateIntent(Context context){
-        return new Intent(context, PeopleWork.class);
+        return new Intent(context, PeopleWorkEditActivity.class);
     }
     @Override
     public Activity getActivity() {
@@ -80,7 +83,22 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void initData() {
-
+        Intent intent=getIntent();//getIntent将该项目中包含的原始intent检索出来，将检索出来的intent赋值给一个Intent类型的变量intent
+        Bundle bundle=intent.getExtras();//.getExtras()得到intent所附带的额外数据
+        final int W_Id=bundle.getInt("W_Id");//getString()返回指定key的值
+        Log.d("W_ID",W_Id+"");
+        work_id=W_Id;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PeopleWorkHelper peopleWorkHelper=new PeopleWorkHelper(context);
+                PeopleWork peopleWork=peopleWorkHelper.queryById(W_Id);
+                company_text.setText(peopleWork.getW_Company());
+                position_text.setText(peopleWork.getW_Position());
+                mark_text.setText(peopleWork.getW_Remark());
+                company_addressText.setText(peopleWork.getW_Address());
+            }
+        }).start();
     }
 
     @Override
@@ -95,12 +113,12 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
         int id=v.getId();
         switch(id){
             case R.id.company_position:{
-                getParent().startActivityForResult(BottomMenuWindow.createIntent(context.getParent(), position)
+                startActivityForResult(BottomMenuWindow.createIntent(context, position)
                         .putExtra(BottomMenuWindow.INTENT_TITLE, "选择职位"), REQUEST_TO_BOTTOM_MENU);
                 break;
             }
             case R.id.company_address:{
-                getParent().startActivityForResult(PlacePickerWindow.createIntent(context.getParent(), getPackageName(), 2), REQUEST_TO_PLACE_PICKER);
+                startActivityForResult(PlacePickerWindow.createIntent(context, getPackageName(), 2), REQUEST_TO_PLACE_PICKER);
                 break;
             }
             case R.id.next:{
@@ -111,8 +129,7 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
                 mark_name=String.valueOf(mark_text.getText());
 
                 insertWork();
-                AddPeopleActivity add= (AddPeopleActivity) getParent();
-                add.setCurrentPage(2);
+
                 break;
             }
         }
@@ -125,12 +142,20 @@ public class PeopleWorkActivity extends BaseActivity implements View.OnClickList
             public void run() {
                 //MyApplication myApplication= (MyApplication) getApplicationContext();
                 PeopleWork peopleWork=getMyApplication().getPeopleWork();
+                peopleWork.setW_id(work_id);
                 peopleWork.setW_Company(company_name);
                 peopleWork.setW_Position(position_name);
                 peopleWork.setW_Address(address_name);
                 peopleWork.setW_Remark(mark_name);
                 Log.d("peopleWork",getMyApplication().getPeopleWork().toString());
+                //插入peopleWork
+                PeopleWorkHelper peopleWorkHelper=new PeopleWorkHelper(context);
+                peopleWork=getMyApplication().getPeopleWork();
+                peopleWorkHelper.updatePeopleWork(peopleWork);
+                zuo.biao.library.util.Log.d("更新peopleWork",peopleWork.toString());
                 dismissProgressDialog();
+                finish();
+
             }
         });
     }
@@ -144,7 +169,7 @@ public MyApplication getMyApplication(){
     private static final String[] position = {"老板", "教授", "经理","职员","其他"};
 
     @Override
-    public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode != RESULT_OK) {
             return;

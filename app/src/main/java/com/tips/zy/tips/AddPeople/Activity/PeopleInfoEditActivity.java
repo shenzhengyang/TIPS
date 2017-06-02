@@ -1,16 +1,12 @@
 package com.tips.zy.tips.AddPeople.Activity;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,12 +24,8 @@ import java.util.ArrayList;
 
 import zuo.biao.library.base.BaseActivity;
 import zuo.biao.library.ui.BottomMenuWindow;
-import zuo.biao.library.ui.CutPictureActivity;
 import zuo.biao.library.ui.DatePickerWindow;
 import zuo.biao.library.ui.PlacePickerWindow;
-import zuo.biao.library.ui.SelectPictureActivity;
-import zuo.biao.library.util.DataKeeper;
-import zuo.biao.library.util.ImageLoaderUtil;
 import zuo.biao.library.util.StringUtil;
 import zuo.biao.library.util.TimeUtil;
 
@@ -41,7 +33,7 @@ import zuo.biao.library.util.TimeUtil;
  * Created by zy on 2017/4/2.
  */
 
-public class PeopleInfoActivity extends BaseActivity implements View.OnClickListener,OnTabActivityResultListener{
+public class PeopleInfoEditActivity extends BaseActivity implements View.OnClickListener{
     public static final String TAG="PeopleInfoActivity";
     //private Button button;
 //    private PeopleInfoHelper addPeopleHelper;
@@ -62,8 +54,8 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
     private RadioButton P_Faith_button;
     private TextView degree_Text;
     private EditText mark_text;
-    private String P_Icon_name="R.mipmap.avatar_default";
-    private String P_Name_name,P_Gender_name
+
+    private String P_Icon_name,P_Name_name,P_Gender_name
             ,P_Phone_name,P_Mail_name,P_birth_name,P_address_name,
             P_Nation_name,P_Faith_name,P_degree_name,P_mark_name;
     private LinearLayout birth;
@@ -86,7 +78,7 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
         return this;
     }
     public static Intent CreateIntent(Context contxt){
-        return new Intent(contxt,PeopleInfoActivity.class);
+        return new Intent(contxt,PeopleInfoEditActivity.class);
     }
 
     @Override
@@ -113,7 +105,26 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void initData() {
-
+        Intent intent=getIntent();//getIntent将该项目中包含的原始intent检索出来，将检索出来的intent赋值给一个Intent类型的变量intent
+        Bundle bundle=intent.getExtras();//.getExtras()得到intent所附带的额外数据
+        final int P_Id=bundle.getInt("P_Id");//getString()返回指定key的值
+        Log.d("P_ID",P_Id+"");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
+                PeopleInfo peopleInfo=peopleInfoHelper.queryById(P_Id);
+                P_Icon.setImageResource(R.mipmap.icon1);
+                P_Name.setText(peopleInfo.getP_Name());
+                P_Phone.setText(peopleInfo.getP_Phone());
+                P_Mail.setText(peopleInfo.getP_Mail());
+                birth_Text.setText(peopleInfo.getP_BirthDay());
+                address_Text.setText(peopleInfo.getP_Address());
+                P_Nation.setText(peopleInfo.getP_National());
+                degree_Text.setText(peopleInfo.getP_Degree());
+                mark_text.setText(peopleInfo.getP_Remark());
+            }
+        }).start();
 
     }
 
@@ -160,7 +171,6 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
         address.setOnClickListener(this);
         degree.setOnClickListener(this);
         next.setOnClickListener(this);
-        P_Icon.setOnClickListener(this);
     }
 
     @Override
@@ -169,14 +179,14 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
         switch(id){
             case R.id.P_Icon:{
                 //点击图片更换头像
-                selectPicture();
+
                 break;
             }
             case R.id.P_National:{
                 break;
             }
             case R.id.next:{
-
+                P_Icon_name="R.mipmap.avatar_default";
                 P_Name_name=String.valueOf(P_Name.getText());
                 P_Gender_name=String.valueOf(P_Gender_button.getText());
                 P_Phone_name=String.valueOf(P_Phone.getText());
@@ -204,6 +214,7 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
                         peopleInfo.setP_Religion(P_Faith_name);
                         peopleInfo.setP_Degree(P_degree_name);
                         peopleInfo.setP_Remark(P_mark_name);
+
                         runUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -214,64 +225,26 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
                     }
                 });
                 AddPeopleActivity add= (AddPeopleActivity) getParent();
-                add.setCurrentPage(1);
+                add.activityManager.getActivity("工作");
                 break;
             }
             case R.id.birth:{
-                getParent().startActivityForResult(DatePickerWindow.createIntent(context.getParent(), new int[]{1971, 0, 1}
+                startActivityForResult(DatePickerWindow.createIntent(context, new int[]{1971, 0, 1}
                         , TimeUtil.getDateDetail(System.currentTimeMillis())), REQUEST_TO_DATE_PICKER);
                 break;
             }
             case R.id.address:{
-                getParent().startActivityForResult(PlacePickerWindow.createIntent(context.getParent(), getPackageName(), 2), REQUEST_TO_PLACE_PICKER);
+                startActivityForResult(PlacePickerWindow.createIntent(context, getPackageName(), 2), REQUEST_TO_PLACE_PICKER);
                 break;
             }
             case R.id.degree:{
-                getParent().startActivityForResult(BottomMenuWindow.createIntent(context.getParent(), DegreeString)
+                startActivityForResult(BottomMenuWindow.createIntent(context, DegreeString)
                         .putExtra(BottomMenuWindow.INTENT_TITLE, "选择学历"), REQUEST_TO_BOTTOM_MENU);
                 break;
             }
         }
     }
 
-    private String picturePath;
-    /**选择图片
-     */
-    private void selectPicture() {
-        getParent().startActivityForResult(SelectPictureActivity.createIntent(context.getParent()), REQUEST_TO_SELECT_PICTURE);
-    }
-
-    /**裁剪图片
-     * @param path
-     */
-    private void cutPicture(String path) {
-        if (StringUtil.isFilePath(path) == false) {
-            Log.e(TAG, "cutPicture  StringUtil.isFilePath(path) == false >> showShortToast(找不到图片);return;");
-            showShortToast("找不到图片");
-            return;
-        }
-        this.picturePath = path;
-        //ImageLoaderUtil.loadImage(mHeadImg, path);
-        Log.d("picturePath",picturePath);
-        getParent().startActivityForResult(CutPictureActivity.createIntent(context.getParent(), path
-                , DataKeeper.fileRootPath + DataKeeper.imagePath, "photo" + System.currentTimeMillis(), 200)
-                , REQUEST_TO_CUT_PICTURE);
-    }
-
-    /**显示图片
-     * @param path
-     */
-    private void setPicture(String path) {
-        if (StringUtil.isFilePath(path) == false) {
-            Log.e(TAG, "setPicture  StringUtil.isFilePath(path) == false >> showShortToast(找不到图片);return;");
-            showShortToast("找不到图片");
-            return;
-        }
-        Log.d("path",path);
-        this.picturePath = path;
-        ImageLoaderUtil.loadImage(P_Icon, path);
-        P_Icon_name=path;
-    }
     public MyApplication getMyApplication(){
         return (MyApplication) getApplicationContext();
     }
@@ -279,29 +252,16 @@ public class PeopleInfoActivity extends BaseActivity implements View.OnClickList
     private static final int REQUEST_TO_BOTTOM_MENU = 31;
     private static final int REQUEST_TO_PLACE_PICKER = 32;
     private static final int REQUEST_TO_DATE_PICKER = 33;
-    private static final int REQUEST_TO_SELECT_PICTURE=20;
-    private static final int REQUEST_TO_CUT_PICTURE=21;
+
     private static final String[] DegreeString = {"博士", "硕士", "本科","高中","高中以下"};
 
     @Override
-    public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) {
             return;
         }
-
         switch (requestCode) {
-            case REQUEST_TO_SELECT_PICTURE:
-                if (data != null) {
-                    cutPicture(data.getStringExtra(SelectPictureActivity.RESULT_PICTURE_PATH));
-                }
-                break;
-            case REQUEST_TO_CUT_PICTURE:
-                if (data != null) {
-                    Log.d("setPicture",data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
-                    setPicture(data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
-                    Log.d("setPicture",data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
-                }
-                break;
+
             case REQUEST_TO_PLACE_PICKER:
 
                 if (data != null) {

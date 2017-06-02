@@ -463,7 +463,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
                     PeopleAll peopleAll = new PeopleAll();
                     People people=new People();
-                    people.setIcon(icons[new Random().nextInt(1)]);
+                    //people.setIcon(icons[new Random().nextInt(1)]);
                     Log.d("查询peopleInfoAll", peopleInfoAlls.get(i).toString());
                     //查询peopleInfo
                     int P_Id = peopleInfoAlls.get(i).getP_Id();
@@ -473,6 +473,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                     peopleAll.setPeopleInfo(peopleInfo);
                     people.setP_Id(peopleInfo.getP_Id());
                     people.setP_Name(peopleInfo.getP_Name());
+                    people.setIcon(peopleInfo.getP_Icon());
                     //查询peopleWork
                     int W_Id = peopleInfoAlls.get(i).getW_Id();
                     PeopleWorkHelper peopleWorkHelper = new PeopleWorkHelper(context);

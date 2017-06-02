@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -34,8 +35,9 @@ import java.util.List;
 import java.util.Random;
 
 import zuo.biao.library.base.BaseActivity;
+import zuo.biao.library.util.ImageLoaderUtil;
 
-public class PeopleInfoAllActivity extends BaseActivity implements PullScrollView.OnTurnListener {
+public class PeopleInfoAllActivity extends BaseActivity implements PullScrollView.OnTurnListener ,View.OnClickListener{
     private PullScrollView mScrollView;
     private LinearLayout mHeadImg;
 
@@ -48,6 +50,16 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
     private TextView iP_Work;
     private TextView iP_Hobby;
     private TextView iP_Charactor;
+
+    private ImageView Edit_info;
+    private ImageView Edit_work;
+    private ImageView Edit_Hobby;
+    private ImageView Edit_Charactor;
+
+    PeopleInfo peopleInfo;
+    PeopleWork peopleWork;
+    PeopleHobby peopleHobby;
+    PeopleCharacter peopleCharacter;
 
     @Override
     public Activity getActivity() {
@@ -81,6 +93,10 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
         iP_Hobby= (TextView) findViewById(R.id.iP_Hobby);
         iP_Charactor= (TextView) findViewById(R.id.iP_Charactor);
 
+        Edit_info= (ImageView) findViewById(R.id.Edit_info);
+        Edit_work= (ImageView) findViewById(R.id.Edit_work);
+        Edit_Hobby= (ImageView) findViewById(R.id.Edit_hobbys);
+        Edit_Charactor= (ImageView) findViewById(R.id.Edit_charactor);
     }
 
     @Override
@@ -105,7 +121,10 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
 
     @Override
     public void initEvent() {
-
+        Edit_info.setOnClickListener(this);
+        Edit_work.setOnClickListener(this);
+        Edit_Hobby.setOnClickListener(this);
+        Edit_Charactor.setOnClickListener(this);
     }
 
 
@@ -122,31 +141,32 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
         Log.d("queryByP_ID",peopleInfoAll.toString());
         //查询peopleInfo
         PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
-        final PeopleInfo peopleInfo=peopleInfoHelper.queryById(peopleInfoAll.getP_Id());
+        peopleInfo=peopleInfoHelper.queryById(peopleInfoAll.getP_Id());
         Log.d("queryByP_ID",peopleInfo.toString());
         /*iP_Icon.setImageResource(Integer.valueOf(peopleInfo.getP_Icon()));
         iP_Name.setText(peopleInfo.getP_Name());
         iP_Info.setText(peopleInfo.toString());*/
         //查询peopleWork
         PeopleWorkHelper peopleWorkHelper=new PeopleWorkHelper(context);
-        final PeopleWork peopleWork=peopleWorkHelper.queryById(peopleInfoAll.getW_Id());
+        peopleWork=peopleWorkHelper.queryById(peopleInfoAll.getW_Id());
         Log.d("queryByP_ID",peopleWork.toString());
         //iP_Work.setText(peopleWork.toString());
         //查询PeopleHobby
         PeopleHobbyHelper peopleHobbyHelper=new PeopleHobbyHelper(context);
-        final PeopleHobby peopleHobby=peopleHobbyHelper.queryById(peopleInfoAll.getH_Id());
+        peopleHobby=peopleHobbyHelper.queryById(peopleInfoAll.getH_Id());
         Log.d("queryByP_ID",peopleHobby.toString());
         //iP_Hobby.setText(peopleHobby.toString());
         //查询PeopleCharactor
         PeopleCharacterHelper peopleCharacterHelper=new PeopleCharacterHelper(context);
-        final PeopleCharacter peopleCharacter=peopleCharacterHelper.queryById(peopleInfoAll.getC_Id());
+        peopleCharacter=peopleCharacterHelper.queryById(peopleInfoAll.getC_Id());
         Log.d("queryByP_ID",peopleCharacter.toString());
         //iP_Charactor.setText(peopleCharacter.toString());
         runUiThread(new Runnable() {
             @Override
             public void run() {
                 Log.d("ip_con",peopleInfo.getP_Icon());
-                iP_Icon.setImageResource(R.mipmap.icon1);
+                //iP_Icon.setImageResource(R.mipmap.icon1);
+                ImageLoaderUtil.loadImage(iP_Icon,peopleInfo.getP_Icon());
                 iP_Name.setText(peopleInfo.getP_Name());
                 iP_Info.setText(peopleInfo.toString());
                 iP_Work.setText(peopleWork.toString());
@@ -158,5 +178,39 @@ public class PeopleInfoAllActivity extends BaseActivity implements PullScrollVie
     }
     public MyApplication getMyApplication(){
         return (MyApplication) getApplicationContext();
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id=v.getId();
+        switch(id){
+            case R.id.Edit_info:{
+                Intent intent=PeopleInfoEdit2Activity.CreateIntent(PeopleInfoAllActivity.this);
+                Log.d("intentEdit_info",peopleInfo.getP_Id()+"");
+                intent.putExtra("P_Id",peopleInfo.getP_Id());
+
+                startActivity(intent);
+                finish();
+                break;
+            }
+            case R.id.Edit_work:{
+                Intent intent=PeopleWorkEditActivity.CreateIntent(context);
+                intent.putExtra("W_Id",peopleWork.getW_id());
+                startActivity(intent);
+                break;
+            }
+            case R.id.Edit_hobbys:{
+                Intent intent=PeopleHobbyEditActivity.CreateIntent(context);
+                intent.putExtra("H_Id",peopleHobby.getH_Id());
+                startActivity(intent);
+                break;
+            }
+            case R.id.Edit_charactor:{
+                Intent intent=PeopleCharacterEditActivity.CreateIntent(context);
+                intent.putExtra("C_Id",peopleCharacter.getC_Id());
+                startActivity(intent);
+                break;
+            }
+        }
     }
 }

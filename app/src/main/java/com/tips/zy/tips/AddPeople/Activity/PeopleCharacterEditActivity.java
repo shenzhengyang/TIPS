@@ -1,8 +1,8 @@
 package com.tips.zy.tips.AddPeople.Activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +20,6 @@ import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
 import com.tips.zy.tips.AddPeople.Entity.PeopleInfoAll;
 import com.tips.zy.tips.AddPeople.Entity.PeopleWork;
 import com.tips.zy.tips.Application.MyApplication;
-import com.tips.zy.tips.Main.Entity.People;
 import com.tips.zy.tips.R;
 
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ import zuo.biao.library.base.BaseActivity;
 import zuo.biao.library.ui.BottomMenuWindow;
 import zuo.biao.library.ui.EditTextInfoActivity;
 import zuo.biao.library.ui.EditTextInfoWindow;
-import zuo.biao.library.ui.PlacePickerWindow;
 import zuo.biao.library.util.Log;
 import zuo.biao.library.util.StringUtil;
 
@@ -38,13 +36,15 @@ import zuo.biao.library.util.StringUtil;
  * Created by zy on 2017/4/2.
  */
 
-public class PeopleCharacterActivity extends BaseActivity implements View.OnClickListener,OnTabActivityResultListener{
+public class PeopleCharacterEditActivity extends BaseActivity implements View.OnClickListener{
     public static final String TAG="PeopleCharacterActivity";
     private Button finish;
     private EditText mark_text;
     private CheckBox[] checkBoxes=new CheckBox[11];
     private String mark_name;
     private String charac_name;
+
+    int charactor_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +53,9 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
         initData();
         initEvent();
     }
-
+    public static Intent CreateIntent(Context context){
+        return new Intent(context,PeopleCharacterEditActivity.class);
+    }
     @Override
     public Activity getActivity() {
         return this;
@@ -78,7 +80,30 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
 
     @Override
     public void initData() {
-
+        Intent intent=getIntent();//getIntent将该项目中包含的原始intent检索出来，将检索出来的intent赋值给一个Intent类型的变量intent
+        Bundle bundle=intent.getExtras();//.getExtras()得到intent所附带的额外数据
+        final int C_Id=bundle.getInt("C_Id");//getString()返回指定key的值
+        Log.d("W_ID",C_Id+"");
+        charactor_id=C_Id;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PeopleCharacterHelper peopleCharacterHelper=new PeopleCharacterHelper(context);
+                PeopleCharacter peopleCharacter=peopleCharacterHelper.queryById(C_Id);
+                String []str_cha=peopleCharacter.getC_Character().split("\\&");
+                for(int i=0;i<str_cha.length;i++){
+                    for(int j=0;j<11;j++){
+                        if(checkBoxes[j].getText().toString().equals(str_cha[i])){
+                            checkBoxes[j].setChecked(true);
+                        }else{
+                            checkBoxes[10].setChecked(true);
+                            checkBoxes[10].setText(str_cha[i]);
+                        }
+                    }
+                }
+                mark_text.setText(peopleCharacter.getC_Remark());
+            }
+        }).start();
     }
 
     @Override
@@ -92,16 +117,14 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
         int id=v.getId();
         switch(id){
             case R.id.charac_check11:{
-                intent = EditTextInfoWindow.createIntent(context.getParent(), EditTextInfoWindow.TYPE_NICK
+                intent = EditTextInfoWindow.createIntent(context, EditTextInfoWindow.TYPE_NICK
                         , "设置分组", StringUtil.getTrimedString(checkBoxes[10]), getPackageName());
-                getParent().startActivityForResult(intent, REQUEST_TO_EDIT_TEXT_INFO_zidingyi);
+                startActivityForResult(intent, REQUEST_TO_EDIT_TEXT_INFO_zidingyi);
                 break;
             }
             case R.id.next:{
-                getParent().startActivityForResult(BottomMenuWindow.createIntent(context.getParent(), groups)
-                        .putExtra(BottomMenuWindow.INTENT_TITLE, "选择分组"), REQUEST_TO_BOTTOM_MENU);
-
-
+                insertCharac();
+                finish();
                 break;
             }
         }
@@ -111,10 +134,11 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
         mark_name=String.valueOf(mark_text.getText());
         for(int i=0;i<11;i++){
             if(checkBoxes[i].isChecked())
-                charac_name+=checkBoxes[i].getText()+"&";
+                charac_name+=checkBoxes[i].getText();
         }
         //MyApplication myApplication= (MyApplication) getApplicationContext();
         final PeopleCharacter peopleCharacter=getMyApplication().getPeopleCharacter();
+        peopleCharacter.setC_Id(charactor_id);
         peopleCharacter.setC_Remark(mark_name);
         peopleCharacter.setC_Character(charac_name);
         Log.d("PeopleCharacter",getMyApplication().getPeopleCharacter().toString());
@@ -124,51 +148,12 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
 
             @Override
             public void run() {
-
-                //插入peopleInfo
-                PeopleInfoHelper peopleInfoHelper=new PeopleInfoHelper(context);
-                PeopleInfo peopleInfo=getMyApplication().getPeopleInfo();
-                List<PeopleInfo> peopleInfos=new ArrayList<PeopleInfo>();
-                peopleInfos.add(peopleInfo);
-                peopleInfoHelper.addPeopleInfo(peopleInfos);
-                Log.d("插入peopleInfo",peopleInfo.toString());
-                //插入peopleWork
-                PeopleWorkHelper peopleWorkHelper=new PeopleWorkHelper(context);
-                PeopleWork peopleWork=getMyApplication().getPeopleWork();
-                List<PeopleWork> peopleWorks=new ArrayList<PeopleWork>();
-                peopleWorks.add(peopleWork);
-                peopleWorkHelper.addPeopleWork(peopleWorks);
-                Log.d("插入peopleWork",peopleWork.toString());
-
-                //插入peopleHobby
-                PeopleHobbyHelper peopleHobbyHelper=new PeopleHobbyHelper(context);
-                PeopleHobby peopleHobby=getMyApplication().getPeopleHobby();
-                List<PeopleHobby> peopleHobbys=new ArrayList<PeopleHobby>();
-                peopleHobbys.add(peopleHobby);
-                peopleHobbyHelper.addPeopleHobby(peopleHobbys);
-                Log.d("插入peopleHobby",peopleHobby.toString());
                 //插入charactor
                 PeopleCharacterHelper peopleCharacterHelper=new PeopleCharacterHelper(context);
-                List<PeopleCharacter> peopleCharacters=new ArrayList<PeopleCharacter>();
                 PeopleCharacter peopleCharacter1=getMyApplication().getPeopleCharacter();
-                Log.d("PeopleCharacter",peopleCharacter1.toString());
-                peopleCharacters.add(peopleCharacter1);
-                peopleCharacterHelper.addPeopleCharacter(peopleCharacters);
-                //插入peopleInfoAll
-                String User_Name=getMyApplication().getUser_Name();
-                String G_Name=finish.getText().toString();
-                int P_Id=peopleInfoHelper.query_PID();
-                int W_Id=peopleWorkHelper.query_WID();
-                int H_Id=peopleHobbyHelper.query_HID();
-                int C_Id=peopleCharacterHelper.query_CID();
-                PeopleInfoAllHelper peopleInfoAllHelper=new PeopleInfoAllHelper(context);
-                PeopleInfoAll peopleInfoAll=new PeopleInfoAll(User_Name,G_Name,P_Id,W_Id,H_Id,C_Id);
-                List<PeopleInfoAll> peopleInfoAlls=new ArrayList<PeopleInfoAll>();
-                peopleInfoAlls.add(peopleInfoAll);
-                peopleInfoAllHelper.addPeopeInfoAll(peopleInfoAlls);
-                Log.d("插入PeopleInfoAll",peopleInfoAll.toString());
+                peopleCharacterHelper.updatePeopleCharacter(peopleCharacter);
+                Log.d("PeopleCharacter","更新"+peopleCharacter1.toString());
                 dismissProgressDialog();
-                finish();
             }
         }).start();
 
@@ -183,7 +168,7 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
     private static final int REQUEST_TO_EDIT_TEXT_INFO = 47;
     private static final int REQUEST_TO_EDIT_TEXT_INFO_zidingyi = 48;
     @Override
-    public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode != RESULT_OK) {
             return;
@@ -201,8 +186,6 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
                             insertCharac();
                         }
                     }
-
-
                 }
                 break;
             case REQUEST_TO_EDIT_TEXT_INFO_zidingyi:
@@ -210,7 +193,8 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
 
                     checkBoxes[10].setText(StringUtil.getTrimedString(
                             data.getStringExtra(EditTextInfoWindow.RESULT_VALUE)));
-
+                    //插入数据
+                    insertCharac();
                 }
                 break;
             case REQUEST_TO_EDIT_TEXT_INFO:
@@ -220,7 +204,6 @@ public class PeopleCharacterActivity extends BaseActivity implements View.OnClic
                             data.getStringExtra(EditTextInfoWindow.RESULT_VALUE)));
                     //插入数据
                     insertCharac();
-
                 }
                 break;
             default:

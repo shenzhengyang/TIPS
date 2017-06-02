@@ -1,6 +1,7 @@
 package com.tips.zy.tips.Application;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.tips.zy.tips.AddPeople.Entity.PeopleAllInfo;
 import com.tips.zy.tips.AddPeople.Entity.PeopleCharacter;
@@ -15,11 +16,13 @@ import com.tips.zy.tips.Main.Entity.PeopleGroupAll;
 import java.util.ArrayList;
 import java.util.List;
 
+import zuo.biao.library.base.BaseApplication;
+
 /**
  * Created by zy on 2017/5/21.
  */
 
-public class MyApplication extends Application {
+public class MyApplication extends BaseApplication {
     /**
      * 设置全局的变量实体-分组
      */
@@ -28,8 +31,8 @@ public class MyApplication extends Application {
     private PeopleHobby peopleHobby;
     private PeopleCharacter peopleCharacter;
     private PeopleAllInfo peopleAllInfo;
-    private List<People> peoples;
-    private List<Group> groups;
+    private List<People> peoples=new ArrayList<>();
+    private List<Group> groups=new ArrayList<>();
 
     public List<People> getPeoples() {
         return peoples;
@@ -90,7 +93,7 @@ public class MyApplication extends Application {
     /**
      * 以下为用户的全局变量
      */
-    private User user=new User();
+    private User user;
 
     public User getUser() {
         return user;
@@ -98,6 +101,7 @@ public class MyApplication extends Application {
 
     public void setUser(User user) {
         this.user = user;
+        Log.d("初始化user",user.toString());
     }
 
     private String User_Name="TIPS";
@@ -126,13 +130,17 @@ public class MyApplication extends Application {
         peopleInfo=new PeopleInfo();
         peopleHobby=new PeopleHobby();
         peopleCharacter=new PeopleCharacter();
+
+        user=new User();
+
+        peopleGroupAlls=new ArrayList<>();
         super.onCreate();
     }
 
     /**
      * query 所有信息
      */
-    private List<PeopleGroupAll> peopleGroupAlls=new ArrayList<>();
+    private List<PeopleGroupAll> peopleGroupAlls;
 
     public List<PeopleGroupAll> getPeopleGroupAlls() {
         return peopleGroupAlls;

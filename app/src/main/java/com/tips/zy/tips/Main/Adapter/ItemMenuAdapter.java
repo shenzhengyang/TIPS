@@ -19,6 +19,7 @@ import com.tips.zy.tips.R;
 
 import java.util.List;
 
+import zuo.biao.library.util.ImageLoaderUtil;
 import zuo.biao.library.util.Log;
 
 /**
@@ -125,7 +126,7 @@ public class ItemMenuAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "单击了 "+position, Toast.LENGTH_SHORT).show();
-                context.startActivity(PeopleInfoAllActivity.CreateIntent(context));
+                context.startActivity(PeopleInfoAllActivity.CreateIntent(context).putExtra("P_Id",peoples.get(position).getP_Id()));
             }
         });
 
@@ -148,7 +149,8 @@ public class ItemMenuAdapter extends BaseAdapter {
         ImageView Icon= (ImageView) convertView.findViewById(R.id.P_Icon);
         TextView Name= (TextView) convertView.findViewById(R.id.P_Name);
         TextView Hobby= (TextView) convertView.findViewById(R.id.P_Hobby);
-        Icon.setImageResource(peoples.get(position).getIcon());
+        ImageLoaderUtil.loadImage(Icon,peoples.get(position).getIcon());
+        //Icon.setImageResource(peoples.get(position).getIcon());
         Name.setText(peoples.get(position).getP_Name());
         Hobby.setText(peoples.get(position).getP_Hobby());
         return convertView;

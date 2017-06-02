@@ -24,6 +24,8 @@ import com.tips.zy.tips.Main.View.ItemMenuView;
 import java.util.ArrayList;
 import java.util.List;
 
+import zuo.biao.library.util.ImageLoaderUtil;
+
 import static android.view.FrameMetrics.ANIMATION_DURATION;
 
 
@@ -98,7 +100,8 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 		ImageView Icon= (ImageView) view.findViewById(R.id.P_Icon);
 		TextView Name= (TextView) view.findViewById(R.id.P_Name);
 		TextView Hobby= (TextView) view.findViewById(R.id.P_Hobby);
-		Icon.setImageResource(groups.get(groupPosition).getPeoples().get(childPosition).getIcon());
+		ImageLoaderUtil.loadImage(Icon, groups.get(groupPosition).getPeoples().get(childPosition).getIcon());
+		//Icon.setImageResource(groups.get(groupPosition).getPeoples().get(childPosition).getIcon());
 		Name.setText(groups.get(groupPosition).getPeoples().get(childPosition).getP_Name());
 		Hobby.setText(groups.get(groupPosition).getPeoples().get(childPosition).getP_Hobby());
 
@@ -110,7 +113,12 @@ public class PinnedHeaderExpandableAdapter extends  BaseExpandableListAdapter im
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		return groups.get(groupPosition).getPeoples().size();
+		try {
+			return groups.get(groupPosition).getPeoples().size();
+		}catch (Exception e){
+			return 0;
+		}
+
 	}
 
 	@Override

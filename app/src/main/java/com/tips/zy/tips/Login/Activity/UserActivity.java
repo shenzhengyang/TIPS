@@ -18,7 +18,9 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tips.zy.tips.Application.MyApplication;
 import com.tips.zy.tips.Const.Const;
+import com.tips.zy.tips.Login.Enity.User;
 import com.tips.zy.tips.Login.View.PullScrollView;
 import com.tips.zy.tips.Main.Activity.MainActivity;
 import com.tips.zy.tips.Other.Activity.BackActivity;
@@ -53,6 +55,9 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
     private PullScrollView mScrollView;
     private ImageView mHeadImg;
 
+    private TextView label;
+    private TextView user_Name;
+
 
     private ImageView userIcon;
     private LinearLayout lin_userProtect;
@@ -64,6 +69,7 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
 
     private Button loginOut;
     private TextView protect_Phone;
+    User user;
 
     public static final String TAG="UserActivity";
     @Override
@@ -81,6 +87,7 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
         setContentView(R.layout.user);
 
         initView();
+        initData();
         initEvent();
     }
 
@@ -102,11 +109,18 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
         protect_Phone= (TextView) findViewById(R.id.protect_Phone);
 
         Log.d("initView","innitView");
+        user_Name= (TextView) findViewById(R.id.user_name);
+        label= (TextView) findViewById(R.id.attention_user);
     }
 
     @Override
     public void initData() {
-
+        user=getMyApplication().getUser();
+        Log.d("User---------",user.getU_name());
+        user_Name.setText(user.getU_name());
+        if(!user.getU_name().equals(user.getU_Phone())){
+            label.setText(user.getU_Phone());
+        }
     }
 
     @Override
@@ -119,6 +133,7 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
         lin_aboutUs.setOnClickListener(this);
         lin_updateVersion.setOnClickListener(this);
         loginOut.setOnClickListener(this);
+        label.setOnClickListener(this);
         Log.d("initView","innitEvent");
     }
 
@@ -134,6 +149,12 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
     public void onClick(View v) {
         int id=v.getId();
         switch(id){
+            case R.id.attention_user:{
+            Intent intent = EditTextInfoWindow.createIntent(context, EditTextInfoWindow.TYPE_NICK
+                        , "签名", StringUtil.getTrimedString(protect_Phone), getPackageName());
+            toActivity(intent, REQUEST_TO_EDIT_TEXT_INFO_label);
+            break;
+            }
             case R.id.user_avatar:{
                 selectPicture();
                 break;
@@ -196,7 +217,8 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
             return;
         }
         this.picturePath = path;
-
+        //ImageLoaderUtil.loadImage(mHeadImg, path);
+        Log.d("picturePath",picturePath);
         toActivity(CutPictureActivity.createIntent(context, path
                 , DataKeeper.fileRootPath + DataKeeper.imagePath, "photo" + System.currentTimeMillis(), 200)
                 , REQUEST_TO_CUT_PICTURE);
@@ -211,9 +233,11 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
             showShortToast("找不到图片");
             return;
         }
+        Log.d("path",path);
         this.picturePath = path;
         mScrollView.smoothScrollTo(0, 0);
         ImageLoaderUtil.loadImage(userIcon, path);
+        user.setU_Icon(path);
     }
 
     /**编辑图片名称
@@ -238,7 +262,7 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
     private static final int REQUEST_TO_PLACE_PICKER = 32;
     private static final int REQUEST_TO_DATE_PICKER = 33;
     private static final int REQUEST_TO_TIME_PICKER = 34;
-
+    private static final int REQUEST_TO_EDIT_TEXT_INFO_label=35;
     private static final String[] TOPBAR_COLOR_NAMES = {"灰色", "蓝色", "黄色"};
 
     @Override
@@ -255,7 +279,9 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
                 break;
             case REQUEST_TO_CUT_PICTURE:
                 if (data != null) {
+                    Log.d("setPicture",data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
                     setPicture(data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
+                    Log.d("setPicture",data.getStringExtra(CutPictureActivity.RESULT_PICTURE_PATH));
                 }
                 break;
             case REQUEST_TO_PLACE_PICKER:
@@ -309,9 +335,30 @@ public class UserActivity extends BaseActivity implements PullScrollView.OnTurnL
                             data.getStringExtra(EditTextInfoWindow.RESULT_VALUE)));
                 }
                 break;
+            case REQUEST_TO_EDIT_TEXT_INFO_label:
+                if (data != null) {
+                    mScrollView.smoothScrollTo(0, 0);
+                    label.setText(StringUtil.getTrimedString(
+                            data.getStringExtra(EditTextInfoWindow.RESULT_VALUE)));
+                    user.setU_Phone(StringUtil.getTrimedString(
+                            data.getStringExtra(EditTextInfoWindow.RESULT_VALUE)));
+                }
+                break;
             default:
                 break;
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d("onBackPressed","按下了返回键");
+        getMyApplication().setUser(user);
+        finish();
+        super.onBackPressed();
+    }
+
+    public MyApplication getMyApplication(){
+        return (MyApplication) getApplicationContext();
     }
 }

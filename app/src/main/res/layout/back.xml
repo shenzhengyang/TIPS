@@ -33,12 +33,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/connection"
             android:background="@color/gray_Line"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
     <Button
-
+        android:id="@+id/put"
         android:layout_margin="20dp"
         android:textSize="16dp"
         android:background="@drawable/button_shape"

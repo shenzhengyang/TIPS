@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.tips.zy.tips.AddPeople.Entity.PeopleInfo;
 import com.tips.zy.tips.AddPeople.Entity.PeopleInfoAll;
+import com.tips.zy.tips.AddPeople.Entity.PeopleWork;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -359,5 +360,58 @@ public class PeopleInfoHelper extends SQLiteOpenHelper{
         curcor.close();
         return peopleInfo;
     }
+    public List<PeopleInfo> queryByLike(String str_search){
+        ArrayList<PeopleInfo> peopleInfos=new ArrayList<PeopleInfo>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor curcor=null;
+        try{
+            curcor=db.query(TABLE_NAME, null, P_Name+" like ?", new String[]{"%"+str_search+"%"}, null, null, null);
+            Log.d("curcor+search",curcor.toString());
+        }catch(Exception e){
+            Log.d("queryByLike","e.printStackTrace();");
+            e.printStackTrace();
+        }
+        //Cursor curcor=db.query(TABLE_NAME, null, P_Name+" like ？", new String[]{"%"+str_search+"%"}, null, null, null);
+        while(curcor.moveToNext()){
+            PeopleInfo peopleInfo=new PeopleInfo();
+            peopleInfo.setP_Id(curcor.getInt(curcor.getColumnIndex(P_Id)));
+            peopleInfo.setP_Icon(curcor.getString(curcor.getColumnIndex(P_Icon)));
+            peopleInfo.setP_Name(curcor.getString(curcor.getColumnIndex(P_Name)));
+            peopleInfo.setP_Gender(curcor.getString(curcor.getColumnIndex(P_Gender)));
+            peopleInfo.setP_Phone(curcor.getString(curcor.getColumnIndex(P_Phone)));
+            peopleInfo.setP_Mail(curcor.getString(curcor.getColumnIndex(P_Mail)));
+            peopleInfo.setP_Address(curcor.getString(curcor.getColumnIndex(P_Address)));
+            peopleInfo.setP_National(curcor.getString(curcor.getColumnIndex(P_National)));
+            peopleInfo.setP_Religion(curcor.getString(curcor.getColumnIndex(P_Religion)));
+            peopleInfo.setP_Degree(curcor.getString(curcor.getColumnIndex(P_Degree)));
+            peopleInfo.setP_BirthDay(curcor.getString(curcor.getColumnIndex(P_BirthDay)));
+            peopleInfo.setP_Remark(curcor.getString(curcor.getColumnIndex(P_Remark)));
 
+            zuo.biao.library.util.Log.d("helperpeopleInfoAll",peopleInfo.toString());
+            peopleInfos.add(peopleInfo);
+        }
+        curcor.close();
+        return peopleInfos;
+    }
+    /**
+     * 更新peopleInfo数据
+     * @return
+     */
+    public void updatePeopleInfo(PeopleInfo peopleInfo){
+        ContentValues values=new ContentValues();
+        values.put(P_Id,peopleInfo.getP_Id());
+        values.put(P_Icon,peopleInfo.getP_Icon());
+        values.put(P_Name,peopleInfo.getP_Name());
+        values.put(P_Gender,peopleInfo.getP_Gender());
+        values.put(P_Phone,peopleInfo.getP_Phone());
+        values.put(P_Mail,peopleInfo.getP_Mail());
+        values.put(P_Address,peopleInfo.getP_Address());
+        values.put(P_National,peopleInfo.getP_National());
+        values.put(P_Religion,peopleInfo.getP_Religion());
+        values.put(P_Degree,peopleInfo.getP_Degree());
+        values.put(P_BirthDay,peopleInfo.getP_BirthDay());
+        values.put(P_Remark,peopleInfo.getP_Remark());
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.update(TABLE_NAME,values,"P_Id = ?",new String[]{String.valueOf(peopleInfo.getP_Id())});
+    }
 }

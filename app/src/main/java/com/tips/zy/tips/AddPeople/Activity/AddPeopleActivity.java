@@ -9,6 +9,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.tips.zy.tips.AddPeople.Adapter.AddPeopleAdapter;
@@ -37,6 +38,7 @@ public class AddPeopleActivity extends BaseActivity implements View.OnClickListe
      * @param context
      * @return
      */
+
     public static Intent createIntent(Context context) {
         return new Intent(context, AddPeopleActivity.class);
     }

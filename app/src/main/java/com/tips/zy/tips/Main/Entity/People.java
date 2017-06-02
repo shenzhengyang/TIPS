@@ -6,11 +6,11 @@ package com.tips.zy.tips.Main.Entity;
 
 public class People {
     int P_Id;
-    private int icon;
+    private String icon;
     private String P_Name;
     private String P_Hobby;
 
-    public People(int icon, String p_Name, String p_Hobby) {
+    public People(String icon, String p_Name, String p_Hobby) {
         this.icon = icon;
         P_Name = p_Name;
         P_Hobby = p_Hobby;
@@ -28,11 +28,11 @@ public class People {
         P_Id = p_Id;
     }
 
-    public int getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(int icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
